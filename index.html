@@ -9,9 +9,9 @@
             <label for="age">Edad:</label><br>
             <input type="number" name="age" id="age" min="1" max="100" step="1"><br>
             <label for="study">Secundario:</label><br>
-            <input type="radio" id="secIncompleto" name="study" value="secIncompleto" checked=true>
+            <input type="radio" id="secCompleto" name="study" value="secCompleto" checked=true>
             <label for="male">Incompleto</label><br>
-            <input type="radio" id="secCompleto" name="study" value="secCompleto">
+            <input type="radio" id="secIncompleto" name="study" value="secIncompleto">
             <label for="female">Completo</label><br>
         </fieldset>
     </form> 
@@ -27,10 +27,10 @@
     <br>
     <br>
     <hr>
-    <p align="right">v0.3</p>
+    <p align="right">v0.4</p>
     <script>
         function myFunction() {
-            var name = document.querySelector('input[name="name"]').value || 'NOMBRE';
+            var name = document.querySelector('input[name="name"]').value;
             var age = document.querySelector('input[name="age"]').value;
             var sec = document.querySelector('input[name="study"]:checked').value;
             var txt = `La inscripción de ${name} se realizó satisfactoriamente`
@@ -42,13 +42,18 @@
             }
 
             if (age == null || age == "") {
-                txt = "La edad es requerda";
+                txt = "La edad es requerida";
                 val = 1;
             } else {
-                if (age < 19 || age > 25) {
+                if (age < 18 || age > 25) {
                     txt = "Debe tener entre 18 y 25 años de edad";
                     val = 1;
                 }
+            }
+
+            if (name == null || name == "") {
+                txt = "El nombre es requerido";
+                val = 1;
             }
 
             document.getElementById("demo").innerHTML = txt;
