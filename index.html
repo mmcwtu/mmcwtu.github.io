@@ -1,66 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang="title">Generador de cuentos infantiles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-    <h2>Formulario de inscripci&oacute;n</h2>
-    <form action="/action_page.php">
-      <fieldset>
-        <legend>Datos:</legend>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name" placeholder="Tu nombre"><br>
-            <label for="age">Edad:</label><br>
-            <input type="number" name="age" id="age" min="1" max="100" step="1"><br>
-            <label for="study">Estudios:</label><br>
-            <input type="radio" id="secIncompleto" name="study" value="secIncompleto" checked=true>
-            <label for="male">Secundario Incompleto</label><br>
-            <input type="radio" id="secCompleto" name="study" value="secCompleto">
-            <label for="female">Secundario Completo</label><br>
-            <label for="female">Test</label><br>
-        </fieldset>
-    </form> 
-    <button onclick="myFunction()">Inscribirme</button>
-    <br />
-    <h1 id="demo"></h1>
-    <script>
-        function myFunction() {
-            var name = document.querySelector('input[name="name"]').value;
-            var age = document.querySelector('input[name="age"]').value;
-            var sec = document.querySelector('input[name="study"]:checked').value;
-            var txt = `La inscripción de ${name} se realizó satisfactoriamente`
-            var val = 0 
-            
-            if (sec === "secIncompleto") {
-                txt = "Debe haber terminado el secundario";
-                val = 1;
-            }
-
-            if (age == null || age == "") {
-                txt = "La edad es requerida";
-                val = 1;
-            } else {
-                if (age < 17 || age > 25) {
-                    txt = "Debe tener entre 18 y 25 años de edad";
-                    val = 1;
-                }
-            }
-
-            if (name == null || name == "") {
-                txt = "El nombre es requerido";
-                val = 1;
-            }
-
-            document.getElementById("demo").innerHTML = txt;
-            setTimeout(clear, 3000);
-
-            if(val === 0){
-                document.querySelector('input[name="name"]').value = '';
-                document.querySelector('input[name="age"]').value = '';
-                document.querySelector('input[value="secIncompleto"]').checked = true;
-            }
-        }
-
-        clear = function(){
-            document.getElementById("demo").innerHTML  = '';
-        }
-    </script>
+    <h1 data-lang="title">Generador de cuentos infantiles</h1>
+    <hr />
+    <form>
+      <h2 for="language">Language:</h2>
+      <select name="language" id="language">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="pt">Português</option>
+          <option value="de">Deutsch</option>
+          <option value="it">Italiano</option>
+      </select>
+        <h2 for="name" data-lang="characterLabel">Nombre del personaje principal:</h2>
+        <input type="text" id="name" required>
+        <h2 for="storyType" data-lang="storyTypeLabel">Tipo de cuento:</h2>
+        <select name="storyType" id="storyType">
+            <option value="realistic" data-lang="storyTypeLabelRealistic">Realista</option>
+            <option value="fantastic" data-lang="storyTypeLabelFantastic">Fantástico</option>
+            <option value="terror" data-lang="storyTypeLabelTerror">Terror</option>
+            <option value="sciFi" data-lang="storyTypeLabelSciFi">Ciencia ficción</option>
+            <option value="romantic" data-lang="storyTypeLabelRomantic">Romántico</option>
+            <option value="mystery" data-lang="storyTypeLabelMystery">Misterio</option>
+        </select>
+        <div class="content">
+            <input type="checkbox" id="moral" name="moral">
+            <h2 class="text-checkbox" data-lang="moralCheckbox">
+                Finalizar con una moraleja
+            </h2>
+          </div>
+    <button type="submit" id="submit-button" data-lang="generateButton">Generar</button>
+  </form>
+  <div id="loading-overlay" class="overlay loading">
+    <p id="loading-text" data-lang="loadingLabel">Cargando...</p>
+  </div>
+  <hr />
+  <div id="story-overlay" class="overlay story" display="none">
+    <h1 id="title"></h1>
+    <span id="close-button" onclick="closeOverlay()">✕</span>
+    <p id="output"></p>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
