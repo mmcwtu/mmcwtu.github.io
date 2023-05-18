@@ -1,0 +1,14 @@
+.rounded-div {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.rounded-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+} 
