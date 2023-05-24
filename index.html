@@ -1,52 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-lang="title">Generador de cuentos infantiles</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
+<style>
+  body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 300%;
+  }
+  </style>
 <body>
-    <h1 data-lang="title">Generador de cuentos infantiles</h1>
-    <hr />
-    <form>
-      <h2 for="language">Language:</h2>
-      <select name="language" id="language">
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="fr">Français</option>
-          <option value="pt">Português</option>
-          <option value="de">Deutsch</option>
-          <option value="it">Italiano</option>
-      </select>
-        <h2 for="name" data-lang="characterLabel">Nombre del personaje principal:</h2>
-        <input type="text" id="name" required>
-        <h2 for="storyType" data-lang="storyTypeLabel">Tipo de cuento:</h2>
-        <select name="storyType" id="storyType">
-            <option value="realistic" data-lang="storyTypeLabelRealistic">Realista</option>
-            <option value="fantastic" data-lang="storyTypeLabelFantastic">Fantástico</option>
-            <option value="terror" data-lang="storyTypeLabelTerror">Terror</option>
-            <option value="sciFi" data-lang="storyTypeLabelSciFi">Ciencia ficción</option>
-            <option value="romantic" data-lang="storyTypeLabelRomantic">Romántico</option>
-            <option value="mystery" data-lang="storyTypeLabelMystery">Misterio</option>
-        </select>
-        <div class="content">
-            <input type="checkbox" id="moral" name="moral">
-            <h2 class="text-checkbox" data-lang="moralCheckbox">
-                Finalizar con una moraleja
-            </h2>
-          </div>
-    <button type="submit" id="submit-button" data-lang="generateButton">Generar</button>
+
+  <form>
+    
   </form>
-  <div id="loading-overlay" class="overlay loading">
-    <p id="loading-text" data-lang="loadingLabel">Cargando...</p>
+
+  <div class="main-menu-container">
+    <a href="newStory.html?prev=index">
+      <div class="image-text-container">
+        <img class="menu-image" src="images/mainMenu/newStory.png" alt="newStory">
+        <div class="image-text" data-lang="newStoryOptionLabel">New Story</div>
+      </div>
+    </a>
+  
+    <a href="trueStory.html">
+      <div class="image-text-container">
+        <img class="menu-image" src="images/mainMenu/trueStory.png" alt="trueStory">
+        <div class="image-text" data-lang="trueStoryOptionLabel">True Story</div>
+      </div>
+    </a>
   </div>
-  <hr />
-  <div id="story-overlay" class="overlay story" display="none">
-    <h1 id="title"></h1>
-    <span id="close-button" onclick="closeOverlay()">✕</span>
-    <p id="output"></p>
+
+  <div class="navbar" id="myNavbar">
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
+        </div>
+        <div class="dropdown-content">
+          <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
+          <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
+          <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
+          <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
+          <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
+          <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="index.html">
+            <img class="flag-image pepe"src="images/menu/home.png" alt="home">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="credits.html">
+            <img class="flag-image"src="images/menu/info.png" alt="info">
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <script src="main.js"></script>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

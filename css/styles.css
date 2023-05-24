@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+:root {
+--cp: #000000;
+--cs: #2aaa1e;
+--ct: #66D9E8;
+--cf: #FFFFFF;
+--cte: #333333;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--cf);
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 300%;
+}
+
+h1 {
+font-weight: 700;
+margin: 1rem 0;
+margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-checkbox {
+display: block;
+padding-left: 2rem;
+text-indent: -15px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.loading{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.story {
+    background-color: white;
+}
+
+#loading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+.scrollable-container {
+  width: 90%;
+  height: 40vh;
+  overflow-y: auto;
+  flex-direction: column;
+  margin-block: 10px;
+  background-color: rgba(112, 174, 187, 0.4);
+  border-radius: 5%;
+}
+
+.scrollable-container img {
+  width: 95%;
+}
+
+.fixed-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fixed-container img {
+  max-width: 90%;
+  height: auto;
+}
+
+.unselected-image {
+  opacity: 0.75;
+  transition: opacity 0.3s ease-in-out;
+  max-width: 95%;
+  border-radius: 10%;
+  margin-block: 5px;
+}
+
+.selected-image {
+  border: 2px solid lightblue;
+  opacity: 1;
+  max-width: 95%;
+  border-radius: 10%;
+  margin-block: 5px;
+}
+
+.image-text-story {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px;
+  font-size: 8vw;
+  text-shadow: 0px 0px 5px #000000;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.main-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-menu-container img {
+  width: 80%;
+  height: auto;
+  max-width: 100%;
+}
+
+.image-text-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-text {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  font-size: 35px;
+  font-family: "Brush Script MT", cursive;
+  text-shadow: 0px 0px 3px #000000;
+  color: #ffffff;
+}
+
+.footer {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.navigation-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10vw;
+  padding: 5px;
+  z-index: 9999;
+}
+
+.custom-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-button-image {
+  max-width: auto;
+  height: 3rem;
+}
+
+.custom-button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 8vw;
+  font-family: "Nunito";
+  text-shadow: 0px 0px 3px #ffffff;
+  color: #000;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lang-scrollable-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vh;
+  overflow-y: auto;
+  flex-direction: column;
+  border-radius: 20px;
+  margin: 10px;
+  padding-top: 20px;
+}
+
+.lang-container {
+  position: relative;
+  display: grid;
+  padding-inline: 10px;
+  margin: 10px;
+}
+
+.lang-scrollable-container img {
+  opacity: 1;
+  width: 20%;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.lang-image-text {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.centered-bottom-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-field {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  margin: 10px;
+}
+
+.text-field:focus {
+  border-color: #007bff;
+}
+
+.label-margin {
+  margin-top: 15px;
+}
+
+.story-box {
+  width: 95vw;
+  height: 75vh;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.story-scrollable-container {
+  width: 95vw;
+  height: 85vh;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid rgb(114, 114, 114);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  bottom: 100%;
+  text-align: center;
+  width: 2rem;
+  height: 13.5rem;
+  margin-left: 0.1rem;
+}
+
+.flag-image {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.flag-selected-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.flag-unselected-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.show {
+  display: block;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.left,
+.center,
+.right {
+  flex-basis: 33.33%; /* Distribute the space evenly */
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: rgb(162, 162, 162, 0.7);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.navbar-parent {
+  position: relative;
+  z-index: 999;
+}
+
+/* Style the links inside the navigation bar */
+.navbar-element-left {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-element {
+  /* flex-basis: 33.33%; */
+  float: center;
+  display: inline;
+  text-align: center;
+  text-decoration: none;
+  margin-inline: 3vh;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+.menu-image {
+  border: 2px solid lightblue;
+  opacity: 1;
+  width: 100%;
+  border-radius: 10%;
+  margin-block: 5px;
+}
