@@ -3,53 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-lang="title">Generador de cuentos infantiles</title>
+  <title data-lang="title">Cuentos infantiles</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <form>
 
-    <h1 data-lang="newStoryOptionLabel">New Story</h1>
+    <h1 data-lang="newStoryOptionLabel">Nueva Historia</h1>
 
-    <div data-lang="characterLabel">Main character's name:</div>
+    <div data-lang="characterLabel">Nombre del personaje principal:</div>
 
     <div class="control">
       <input class="text-field" type="text" id="name" placeholder="">
     </div>
       
-    <div data-lang="storyTypeLabel">Story type:</div>
+    <div data-lang="storyTypeLabel">Tipo de cuento:</div>
 
     <div class="center-content">
 
       <div class="scrollable-container">
         <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/fantasticSmall.png" alt="fantastic" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeFantastic">Fantastic</div>
+          <div class="image-text-story" data-lang="storyTypeFantastic">Fantástico</div>
         </div>
 
         <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/princessSmall.png" alt="princess" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypePrincess">Princesses</div>
+          <div class="image-text-story" data-lang="storyTypePrincess">Princesas</div>
         </div>
 
         <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/horrorSmall.png" alt="horror" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeHorror">Horror</div>
+          <div class="image-text-story" data-lang="storyTypeHorror">Terror</div>
         </div>
   
         <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/scifiSmall.png" alt="scifi" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeSciFi">SciFi</div>
+          <div class="image-text-story" data-lang="storyTypeSciFi">Ciencia ficción</div>
         </div>
   
         <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/adventureSmall.png" alt="adventure" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeRealistic">Adventure</div>
+          <div class="image-text-story" data-lang="storyTypeRealistic">Aventura</div>
         </div>
   
         <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/mysterySmall.png" alt="mystery" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeDetective">Mystery</div>
+          <div class="image-text-story" data-lang="storyTypeDetective">Misterio</div>
         </div>
       </div>
 
@@ -59,7 +59,7 @@
       <a href="story.html?prev=newStory">
         <div class="center-content">
           <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
-          <span class="custom-button-text" data-lang="generateButton">Create</span>
+          <span class="custom-button-text" data-lang="generateButton">Crear</span>
         </div>
       </a>
     </div>
@@ -70,7 +70,7 @@
     <div class="navbar-element">
       <div class="dropdown">
         <div class="dropdown-toggle" onclick="toggleDropdown()">
-          <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
+          <img class="flag-selected-image" src="images/flags/es.png" alt="es" id="selected-language">
         </div>
         <div class="dropdown-content">
           <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
