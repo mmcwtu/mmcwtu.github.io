@@ -145,14 +145,20 @@ function selectLanguage(image, lang) {
   localStorage.setItem('selectedLanguage', lang);
   translatePage(false);
 
-  var dropdownOptions = document.querySelectorAll('.dropdown-content img');
-  dropdownOptions.forEach(function(option) {
-    option.classList.remove('selected');
-  });
-  image.classList.add('selected');
+  // var dropdownOptions = document.querySelectorAll('.dropdown-content img');
+  // dropdownOptions.forEach(function(option) {
+  //   option.classList.remove('selected');
+  // });
+  // image.classList.add('selected');
 
+  var selectedImage = document.querySelector('.flag-selected-image');
+  selectedImage.classList.remove('flag-image-border');
+  
   var dropdownContent = document.querySelector('.dropdown-content');
   dropdownContent.classList.remove('show');
+  
+  var selectedImage = document.querySelector('.flag-selected-image');
+  selectedImage.classList.remove('flag-image-border');
 }
 
 document.addEventListener('DOMContentLoaded', function() {

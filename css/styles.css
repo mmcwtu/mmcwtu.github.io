@@ -319,7 +319,7 @@ text-indent: -15px;
   display: none;
   position: absolute;
   z-index: 9999;
-  bottom: 100%;
+  bottom: 140%;
   text-align: center;
   width: 2rem;
   height: 13.5rem;
@@ -331,6 +331,11 @@ text-indent: -15px;
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+}
+
+.flag-image-border {
+  border-radius: 50%;
+  border: 1px groove rgb(255, 255, 255);
 }
 
 .flag-selected-image {
