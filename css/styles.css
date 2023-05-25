@@ -79,6 +79,16 @@ text-indent: -15px;
   border-radius: 5%;
 }
 
+.scrollable-container-big {
+  width: 90%;
+  height: 50vh;
+  overflow-y: auto;
+  flex-direction: column;
+  margin-block: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5%;
+}
+
 .scrollable-container img {
   width: 95%;
 }
