@@ -78,7 +78,7 @@ text-indent: -15px;
   overflow-y: auto;
   flex-direction: column;
   margin-block: 10px;
-  background-color: rgba(112, 174, 187, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5%;
 }
 
@@ -104,7 +104,8 @@ text-indent: -15px;
 }
 
 .unselected-image {
-  opacity: 0.75;
+  border: 1px solid rgb(121, 121, 121);
+  opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
   max-width: 95%;
   border-radius: 10%;
@@ -112,7 +113,7 @@ text-indent: -15px;
 }
 
 .selected-image {
-  border: 2px solid lightblue;
+  border: 1px solid rgb(51, 51, 51);
   opacity: 1;
   max-width: 95%;
   border-radius: 10%;
@@ -121,11 +122,12 @@ text-indent: -15px;
 
 .image-text-story {
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0px;
   font-size: 8vw;
+  font-family: "Nunito";
   text-shadow: 0px 0px 5px #000000;
   color: #ffffff;
   white-space: nowrap;
@@ -137,9 +139,9 @@ text-indent: -15px;
 }
 
 .main-menu-container img {
-  width: 80%;
+  width: 90%;
   height: auto;
-  max-width: 100%;
+  max-width: 90%;
 }
 
 .image-text-container {
@@ -150,9 +152,9 @@ text-indent: -15px;
 .image-text {
   position: relative;
   left: 50%;
-  transform: translate(-50%, -80%);
-  font-size: 35px;
-  font-family: "Brush Script MT", cursive;
+  transform: translate(-50%, -100%);
+  font-size: 10vw;
+  font-family: "Nunito";
   text-shadow: 0px 0px 3px #000000;
   color: #ffffff;
 }
@@ -192,7 +194,7 @@ text-indent: -15px;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  font-size: 8vw;
+  font-size: 200%;
   font-family: "Nunito";
   text-shadow: 0px 0px 3px #ffffff;
   color: #000;
@@ -254,6 +256,7 @@ text-indent: -15px;
   border-radius: 20px;
   border: 1px solid #ccc;
   font-size: 16px;
+  font-family: "Nunito";
   outline: none;
   transition: border-color 0.3s ease;
   margin: 10px;
@@ -278,6 +281,7 @@ text-indent: -15px;
   margin: 10px;
   text-align: justify;
   text-justify: inter-word;
+  font-family: "Nunito";
 }
 
 .story-scrollable-container {
@@ -287,7 +291,7 @@ text-indent: -15px;
   background-color: rgba(255, 255, 255, 0.4);
   flex-direction: column;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #8e8e8e;
   margin: 10px;
 }
 
@@ -387,12 +391,11 @@ footer {
 }
 
 .navbar-element {
-  /* flex-basis: 33.33%; */
   float: center;
   display: inline;
   text-align: center;
   text-decoration: none;
-  margin-inline: 3vh;
+  margin-inline: 2vh;
 }
 
 .navbar .icon {

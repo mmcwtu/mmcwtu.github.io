@@ -17,7 +17,7 @@
       "loadingLabel": "Loading...",
       "startButton": "Start",
       "newStoryOptionLabel": "New Story",
-      "classicStoryOptionLabel": "Classic Story",
+      "quickStoryOptionLabel": "Quick Story",
       "trueStoryOptionLabel": "True Story",
       "credits": "Credits"
         
@@ -40,7 +40,7 @@
       "loadingLabel": "Cargando...",
       "startButton": "Comenzar",
       "newStoryOptionLabel": "Nueva Historia",
-      "classicStoryOptionLabel": "Historia Clásica",
+      "quickStoryOptionLabel": "Historia Clásica",
       "trueStoryOptionLabel": "Historia Real",
       "credits": "Créditos"
     },
@@ -62,7 +62,7 @@
       "loadingLabel": "Chargement en cours...",
       "startButton": "Début",
       "newStoryOptionLabel": "Nouvelle Histoire",
-      "classicStoryOptionLabel": "Histoire Classique",
+      "quickStoryOptionLabel": "Histoire Classique",
       "trueStoryOptionLabel": "Histoire Vraie",
       "credits": "Crédits"
     },
@@ -84,7 +84,7 @@
       "loadingLabel": "Carregando...",
       "startButton": "Início",
       "newStoryOptionLabel": "Nova História",
-      "classicStoryOptionLabel": "História Clássica",
+      "quickStoryOptionLabel": "História Clássica",
       "trueStoryOptionLabel": "História Verdadeira",
       "credits": "Créditos"
     },
@@ -106,7 +106,7 @@
       "loadingLabel": "Laden...",
       "startButton": "Start",
       "newStoryOptionLabel": "Neue Geschichte",
-      "classicStoryOptionLabel": "Klassische Geschichte",
+      "quickStoryOptionLabel": "Klassische Geschichte",
       "trueStoryOptionLabel": "Wahre Geschichte",
       "credits": "Gutschrift"
     },
@@ -128,7 +128,7 @@
       "loadingLabel": "Caricamento...",
       "startButton": "Inizio",
       "newStoryOptionLabel": "Nuova Storia",
-      "classicStoryOptionLabel": "Storia Classica",
+      "quickStoryOptionLabel": "Storia Classica",
       "trueStoryOptionLabel": "Storia Vera",
       "credits": "Crediti"
     }
