@@ -1,70 +1,124 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-lang="title">Generador de cuentos infantiles</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+<style>
+  body {
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 300%;
+  }
+  </style>
 <body>
-  <img class="navigation-back" src="images/back.png" alt="backButton" onclick="goBack()">
+  <form>
 
-  <h1 class="title" data-lang="trueStoryOptionLabel">True Story</h1>
+    <h1 data-lang="trueStoryOptionLabel">True Story</h1>
+      
+    <div data-lang="storyLabel">Story:</div>
 
-  <div class="center-content">
+    <div class="center-content">
 
-    <div class="story-scrollable-container">
-      <a href="story.html?prev=classicStory">
+      <div class="scrollable-container">
         <div class="image-text-container">
-          <img class="selected-image" src="images/classicStory/cinderella.png" alt="cinderella">
-          <div class="image-text-story" data-lang="">Cinderella</div>
+          <img class="unselected-image" src="images/storyTypes/Horror.png" alt="horror" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypeHorror">Horror</div>
         </div>
-      </a>
+  
+        <div class="image-text-container">
+          <img class="unselected-image" src="images/storyTypes/SciFi.png" alt="scifi" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypeSciFi">SciFi</div>
+        </div>
+  
+        <div class="image-text-container">
+          <img class="unselected-image" src="images/storyTypes/Fantastic.png" alt="fantastic" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypeFantastic">Fantastic</div>
+        </div>
+  
+        <div class="image-text-container">
+          <img class="unselected-image" src="images/storyTypes/Adventure.png" alt="adventure" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypeRealistic">Adventure</div>
+        </div>
+  
+        <div class="image-text-container">
+          <img class="unselected-image" src="images/storyTypes/detective.png" alt="mystery" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypeDetective">Mystery</div>
+        </div>
+      </div>
 
-      <a href="story.html?prev=classicStory">
-        <div class="image-text-container">
-          <img class="selected-image" src="images/classicStory/peter.png" alt="peter">
-          <div class="image-text-story" data-lang="">Peter Pan</div>
-        </div>
-      </a>
-
-      <a href="story.html?prev=classicStory">
-        <div class="image-text-container">
-          <img class="selected-image" src="images/classicStory/rapunzel.png" alt="rapunzel">
-          <div class="image-text-story" data-lang="">Rapunzel</div>
-        </div>
-      </a>
-      
-      <a href="story.html?prev=classicStory">
-        <div class="image-text-container">
-          <img class="selected-image" src="images/classicStory/aladdin.png" alt="aladdin">
-          <div class="image-text-story" data-lang="">Aladdin</div>
-        </div>
-      </a>
-      
-      <a href="story.html?prev=classicStory">
-        <div class="image-text-container">
-          <img class="selected-image" src="images/classicStory/lion.png" alt="lion">
-          <div class="image-text-story" data-lang="">The Lion King</div>
-        </div>
-      </a>
-      
-      <a href="story.html?prev=classicStory">
-        <div class="image-text-container">
-          <img class="selected-image" src="images/classicStory/snow.png" alt="snow">
-          <div class="image-text-story" data-lang="">Snow White</div>
-        </div>
-      </a>
-      
-      <a href="story.html?prev=classicStory">
-        <div class="image-text-container">
-          <img class="selected-image" src="images/classicStory/sleeping.png" alt="sleeping">
-          <div class="image-text-story" data-lang="">Sleeping Beauty</div>
-        </div>
-      </a>
-      
     </div>
 
-    <script src="js/main.js"></script>
+    <div class="centered-bottom-button">
+      <a href="story.html?prev=newStory">
+        <div class="center-content">
+          <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
+          <span class="custom-button-text" data-lang="generateButton">Create</span>
+        </div>
+      </a>
+    </div>
+  </form>
+
+  <div class="navbar" id="myNavbar">
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
+        </div>
+        <div class="dropdown-content">
+          <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
+          <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
+          <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
+          <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
+          <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
+          <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="index.html">
+            <img class="flag-image pepe"src="images/menu/home.png" alt="home">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="credits.html">
+            <img class="flag-image"src="images/menu/info.png" alt="info">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <div id="loading-overlay" class="overlay loading">
+    <p id="loading-text" data-lang="loadingLabel">Cargando...</p>
   </div>
 
+  <div id="story-overlay" class="overlay story" display="none">
+    <h1 id="title"></h1>
+    <span id="close-button" onclick="closeOverlay()">✕</span>
+    <p id="output"></p>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

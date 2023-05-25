@@ -15,6 +15,9 @@
   </style>
 <body>
   <form>
+
+    <h1 data-lang="newStoryOptionLabel">New Story</h1>
+
     <div data-lang="characterLabel">Main character's name:</div>
 
     <div class="control">
@@ -27,6 +30,16 @@
 
       <div class="scrollable-container">
         <div class="image-text-container">
+          <img class="unselected-image" src="images/storyTypes/Fantastic.png" alt="fantastic" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypeFantastic">Fantastic</div>
+        </div>
+
+        <div class="image-text-container">
+          <img class="unselected-image" src="images/storyTypes/Princess.png" alt="princess" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypePrincess">Princesses</div>
+        </div>
+
+        <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/Horror.png" alt="horror" onclick="selectImage(this)">
           <div class="image-text-story" data-lang="storyTypeHorror">Horror</div>
         </div>
@@ -37,18 +50,8 @@
         </div>
   
         <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/Fantastic.png" alt="fantastic" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeFantastic">Fantastic</div>
-        </div>
-  
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/Realistic.png" alt="realistic" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeRealistic">Realistic</div>
-        </div>
-  
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/love.png" alt="love" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeLabelRomantic">Romantic</div>
+          <img class="unselected-image" src="images/storyTypes/Adventure.png" alt="adventure" onclick="selectImage(this)">
+          <div class="image-text-story" data-lang="storyTypeRealistic">Adventure</div>
         </div>
   
         <div class="image-text-container">
@@ -62,56 +65,59 @@
     <div class="centered-bottom-button">
       <a href="story.html?prev=newStory">
         <div class="center-content">
-          <img class="custom-button-image" src="images/button.png" alt="start" type="submit">
+          <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
           <span class="custom-button-text" data-lang="generateButton">Create</span>
         </div>
       </a>
     </div>
   </form>
 
-  <div class="footer-container">
-    <footer>
-        <div class="left">
-          <div class="dropdown">
-            <div class="dropdown-toggle" onclick="toggleDropdown()">
-              <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
-            </div>
-            <div class="dropdown-content">
-              <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
-              <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
-              <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
-              <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
-              <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
-              <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
-            </div>
-          </div>
+  <div class="navbar" id="myNavbar">
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
         </div>
-        <div class="center">
-          <div class="dropdown">
-            <div class="dropdown-toggle">
-              <a href="index.html">
-                <img class="flag-image"src="images/menu/home.png" alt="home">
-              </a>
-            </div>
-          </div>
+        <div class="dropdown-content">
+          <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
+          <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
+          <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
+          <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
+          <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
+          <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
         </div>
-        <div class="center">
-          <div class="dropdown">
-            <div class="dropdown-toggle">
-              <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
-            </div>
-          </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
         </div>
-        <div class="right">
-          <div class="dropdown">
-            <div class="dropdown-toggle">
-              <a href="credits.html">
-                <img class="flag-image"src="images/menu/info.png" alt="info">
-              </a>
-            </div>
-          </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="index.html">
+            <img class="flag-image pepe"src="images/menu/home.png" alt="home">
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="credits.html">
+            <img class="flag-image"src="images/menu/info.png" alt="info">
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
   
   <div id="loading-overlay" class="overlay loading">

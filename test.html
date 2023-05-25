@@ -19,6 +19,54 @@
     
   </form>
 
+  <div class="navbar" id="myNavbar">
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
+        </div>
+        <div class="dropdown-content">
+          <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
+          <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
+          <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
+          <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
+          <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
+          <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="index.html">
+            <img class="flag-image pepe"src="images/menu/home.png" alt="home">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="credits.html">
+            <img class="flag-image"src="images/menu/info.png" alt="info">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -15,6 +15,7 @@
   </style>
 <body>
   
+  <form></form>
 
   <div class="story-box">
     <h1 class="title" data-lang="credits">Story Title</h1>
@@ -25,49 +26,52 @@
     <p>Vivamus lacinia semper massa id sagittis. Morbi sed justo odio. Maecenas ultrices mauris at mauris euismod, sit amet gravida diam lobortis. Aliquam at ornare eros. Etiam dignissim ut turpis nec hendrerit. Aenean eget ante ipsum. Duis in justo vel eros viverra tempus. Duis cursus eros vitae accumsan elementum. Nunc eu nunc sed erat egestas condimentum. Fusce porta imperdiet turpis, ut cursus lacus lacinia posuere. Aenean eleifend posuere rutrum. Curabitur non lorem eleifend lectus facilisis consequat. Mauris sit amet suscipit ligula. Pellentesque eget tempus turpis.</p>
   </div>
 
-  <div class="footer-container">
-    <footer>
-        <div class="left">
-          <div class="dropdown">
-            <div class="dropdown-toggle" onclick="toggleDropdown()">
-              <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
-            </div>
-            <div class="dropdown-content">
-              <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
-              <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
-              <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
-              <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
-              <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
-              <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
-            </div>
-          </div>
+  <div class="navbar" id="myNavbar">
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <img class="flag-selected-image" src="images/flags/en.png" alt="en" id="selected-language">
         </div>
-        <div class="center">
-          <div class="dropdown">
-            <div class="dropdown-toggle">
-              <a href="index.html">
-                <img class="flag-image"src="images/menu/home.png" alt="home">
-              </a>
-            </div>
-          </div>
+        <div class="dropdown-content">
+          <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
+          <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
+          <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
+          <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
+          <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
+          <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
         </div>
-        <div class="center">
-          <div class="dropdown">
-            <div class="dropdown-toggle">
-              <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
-            </div>
-          </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
         </div>
-        <div class="right">
-          <div class="dropdown">
-            <div class="dropdown-toggle">
-              <a href="credits.html">
-                <img class="flag-image"src="images/menu/info.png" alt="info">
-              </a>
-            </div>
-          </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="index.html">
+            <img class="flag-image pepe"src="images/menu/home.png" alt="home">
+          </a>
         </div>
-    </footer>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="credits.html">
+            <img class="flag-image"src="images/menu/info.png" alt="info">
+          </a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="js/main.js"></script>
