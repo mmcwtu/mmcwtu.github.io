@@ -9,59 +9,30 @@
 <body>
   <form>
 
-    <h1 data-lang="newStoryOptionLabel">Nueva Historia</h1>
+    <h1 data-lang="contactUs">Contáctanos</h1>
 
-    <div data-lang="characterLabel">Nombre del personaje principal:</div>
-
+    <div data-lang="name">Nombre:</div>
     <div class="control">
-      <input class="text-field" type="text" id="name" placeholder="">
+      <input class="contact-text-field" type="text" id="name" placeholder="">
+    </div>
+
+    <div data-lang="email">Email:</div>
+    <div class="control">
+      <input class="contact-text-field" type="text" id="email" placeholder="">
     </div>
       
-    <div data-lang="storyTypeLabel">Tipo de cuento:</div>
-
-    <div class="center-content">
-
-      <div class="scrollable-container">
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/fantasticSmall.png" alt="fantastic" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeFantastic">Fantástico</div>
-        </div>
-
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/princessSmall.png" alt="princess" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypePrincess">Princesas</div>
-        </div>
-
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/horrorSmall.png" alt="horror" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeHorror">Terror</div>
-        </div>
-  
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/scifiSmall.png" alt="scifi" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeSciFi">Ciencia ficción</div>
-        </div>
-  
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/adventureSmall.png" alt="adventure" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeRealistic">Aventura</div>
-        </div>
-  
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/mysterySmall.png" alt="mystery" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeDetective">Misterio</div>
-        </div>
-      </div>
-
+    <div data-lang="message">Mensaje:</div>
+    <textarea id="myTextarea" rows="7" cols="50" maxlength="500" oninput="countCharacters()"></textarea>
+    <div class="counter-container">
+      <div class="left-counter" id="counter">500</div>
+      <div class="right-counter" data-lang="maxCounter"> caracteres por escribir</div>
     </div>
-
+    
     <div class="centered-bottom-button">
-      <a href="story.html?prev=newStory">
         <div class="center-content">
           <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
-          <span class="custom-button-text" data-lang="generateButton">Crear</span>
+          <span class="custom-button-text" data-lang="send">Enviar</span>
         </div>
-      </a>
     </div>
   </form>
 
@@ -104,8 +75,8 @@
     <div class="navbar-element">
       <div class="dropdown">
         <div class="dropdown-toggle">
-          <a href="contact.html">
-            <img class="flag-image"src="images/menu/contact.png" alt="info">
+          <a href="credits.html">
+            <img class="flag-image"src="images/menu/info.png" alt="info">
           </a>
         </div>
       </div>

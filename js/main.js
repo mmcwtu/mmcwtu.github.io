@@ -154,3 +154,17 @@ document.addEventListener('DOMContentLoaded', function() {
   var defaultImage = document.querySelector('.dropdown-content img:first-child');
   defaultImage.classList.add('selected');
 });
+
+function countCharacters() {
+  var textarea = document.getElementById("myTextarea");
+  var counter = document.getElementById("counter");
+  var maxLength = 500;
+  var currentLength = textarea.value.length;
+  counter.textContent = maxLength - currentLength;
+
+  if (currentLength > maxLength) {
+    counter.style.color = "red"; // Optional: Change counter color if limit exceeded
+  } else {
+    counter.style.color = ""; // Reset counter color if within limit
+  }
+}

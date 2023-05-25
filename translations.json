@@ -13,9 +13,9 @@
       "storyTypeLabelMystery": "Mystery",
       "storyTypeLabelPrincess": "Princesses",
       "storyTypePlane": "Wright Brother",
-      "storyTypeApolo": "Princesses",
-      "storyTypeSteam": "Princesses",
-      "storyTypeColumbus": "Princesses",
+      "storyTypeApolo": "Apolo 11",
+      "storyTypeSteam": "Steam machine",
+      "storyTypeColumbus": "Columbus",
       "moralCheckbox": "Finish with a moral",
       "generateButton": "Create",
       "loadingLabel": "Loading...",
@@ -23,8 +23,13 @@
       "newStoryOptionLabel": "New Story",
       "quickStoryOptionLabel": "Quick Story",
       "trueStoryOptionLabel": "True Story",
-      "credits": "Credits"
-        
+      "credits": "Credits",
+      "contactUs": "Contact us",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send",
+      "maxCounter": "characters left"
     },
     "es": {
       "language": "Español",
@@ -50,7 +55,13 @@
       "newStoryOptionLabel": "Nueva Historia",
       "quickStoryOptionLabel": "Historia Rápida",
       "trueStoryOptionLabel": "Historia Real",
-      "credits": "Créditos"
+      "credits": "Créditos",
+      "contactUs": "Contáctanos",
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "send": "Enviar",
+      "maxCounter": "caracteres restantes"
     },
     "fr": {
       "language": "Français",
@@ -76,7 +87,13 @@
       "newStoryOptionLabel": "Nouvelle Histoire",
       "quickStoryOptionLabel": "Histoire rapide",
       "trueStoryOptionLabel": "Histoire Vraie",
-      "credits": "Crédits"
+      "credits": "Crédits",
+      "contactUs": "Contactez-nous",
+      "name": "Nom",
+      "email": "Email",
+      "message": "Message",
+      "send": "Envoyer",
+      "maxCounter": "caractères restants"
     },
     "pt": {
       "language": "Português",
@@ -102,7 +119,13 @@
       "newStoryOptionLabel": "Nova História",
       "quickStoryOptionLabel": "História rápida",
       "trueStoryOptionLabel": "História Verdadeira",
-      "credits": "Créditos"
+      "credits": "Créditos",
+      "contactUs": "Contate-nos",
+      "name": "Nome",
+      "email": "Email",
+      "message": "Mensagem",
+      "send": "Enviar",
+      "maxCounter": "caracteres restantes"
     },
     "de": {
       "language": "Deutsch",
@@ -128,7 +151,13 @@
       "newStoryOptionLabel": "Neue Geschichte",
       "quickStoryOptionLabel": "Schnelle Geschichte",
       "trueStoryOptionLabel": "Wahre Geschichte",
-      "credits": "Gutschrift"
+      "credits": "Gutschrift",
+      "contactUs": "Kontaktieren Sie uns",
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Senden",
+      "maxCounter": "Zeichen übrig"
     },
     "it": {
       "language": "Italiano",
@@ -154,7 +183,13 @@
       "newStoryOptionLabel": "Nuova Storia",
       "quickStoryOptionLabel": "Storia rapida",
       "trueStoryOptionLabel": "Storia Vera",
-      "credits": "Crediti"
+      "credits": "Crediti",
+      "contactUs": "Contattaci",
+      "name": "Nome",
+      "email": "Email",
+      "message": "Messaggio",
+      "send": "Invia",
+      "maxCounter": "caratteri rimasti"
     }
 }
   
