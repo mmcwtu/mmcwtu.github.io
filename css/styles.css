@@ -260,7 +260,7 @@ text-indent: -15px;
 
 .credits-link {
   position: absolute;
-  top: 95%;
+  top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -331,7 +331,6 @@ text-indent: -15px;
 .dropdown-content {
   display: none;
   position: absolute;
-  /* z-index: 9999; */
   bottom: 180%;
   text-align: center;
   width: 2rem;
