@@ -331,12 +331,16 @@ text-indent: -15px;
 .dropdown-content {
   display: none;
   position: absolute;
-  z-index: 9999;
-  bottom: 140%;
+  /* z-index: 9999; */
+  bottom: 180%;
   text-align: center;
   width: 2rem;
   height: 13.5rem;
-  margin-left: 0.1rem;
+}
+
+.font-size-content {
+  bottom: 135%;
+  height: 7rem;
 }
 
 .flag-image {
@@ -348,7 +352,7 @@ text-indent: -15px;
 
 .flag-image-border {
   border-radius: 50%;
-  border: 1px groove rgb(255, 255, 255);
+  border: 2px groove rgb(255, 255, 255);
 }
 
 .flag-selected-image {
@@ -479,7 +483,7 @@ textarea {
 }
 
 #storyText {
-  font-size: 16px;
+  font-size: 20px;
   padding: 2.5vw;
 }
 
@@ -504,7 +508,6 @@ textarea {
   display: none;
   position: absolute;
   z-index: 9999;
-  /* bottom: 140%; */
   text-align: center;
   width: 2rem;
   height: 13.5rem;

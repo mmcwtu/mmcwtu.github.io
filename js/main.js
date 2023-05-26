@@ -103,6 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
   defaultImage.classList.add('selected');
 
   changeFontSize(true);
+  var defaultImage = document.querySelector('.dropdown-content img:first-child');
+  defaultImage.classList.add('selected');
 });
 
 function selectDefaultFontSize() {
@@ -140,19 +142,19 @@ function translatePage(fromEventListener) {
 }
 
 function changeFontSize(fromEventListener) {
-  const selectedFontSize = localStorage.getItem('fontSize');
+  const selectedFontSize = localStorage.getItem('fontSize') == null ? "fontM" : localStorage.getItem('fontSize');
   console.info(selectedFontSize)
   var textArea = document.getElementById("storyText");
 
   switch (selectedFontSize) {
     case "fontS":
-      textArea.style.fontSize = "12px";
-      break;
-    case "fontM":
       textArea.style.fontSize = "16px";
       break;
-    case "fontL":
+    case "fontM":
       textArea.style.fontSize = "20px";
+      break;
+    case "fontL":
+      textArea.style.fontSize = "24px";
       break;
   }
 
@@ -165,8 +167,16 @@ function changeFontSize(fromEventListener) {
 }
 
 function toggleDropdown() {
-  var dropdownContent = document.querySelector('.dropdown-content');
-  dropdownContent.classList.toggle('show');
+  var dropdownContent = document.querySelector("[class*='dropdown-content']");
+  console.info("LALALLALAL")
+  var isDisplayed = window.getComputedStyle(dropdownContent).getPropertyValue("display") === "block" ? true : false;
+  console.info(window.getComputedStyle(dropdownContent).getPropertyValue("display"));
+
+  if (isDisplayed) {
+    dropdownContent.classList.remove('show');
+  } else {
+    dropdownContent.classList.add('show');
+  }
 }
 
 function selectLanguage(image, lang) {
