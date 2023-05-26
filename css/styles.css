@@ -254,6 +254,17 @@ text-indent: -15px;
   transform: translate(-50%, -50%);
 }
 
+.contact-button {
+  top: 85%;
+}
+
+.credits-link {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .text-field {
   padding: 10px;
   border-radius: 20px;
@@ -277,6 +288,17 @@ text-indent: -15px;
   flex-direction: column;
   border-radius: 5px;
   border: 1px solid #ccc;
+  margin: 10px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: "Nunito";
+}
+
+.credits-box {
+  width: 95vw;
+  height: 70vh;
+  overflow-y: auto;
+  flex-direction: column;
   margin: 10px;
   text-align: justify;
   text-justify: inter-word;
@@ -454,4 +476,37 @@ textarea {
 
 .credits {
   margin: 2vh;
+}
+
+#storyText {
+  font-size: 16px;
+  padding: 2.5vw;
+}
+
+.font-size-selector img {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle-font {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid rgb(114, 114, 114);
+}
+
+.dropdown-content-font {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  /* bottom: 140%; */
+  text-align: center;
+  width: 2rem;
+  height: 13.5rem;
+  margin-left: 0.1rem;
 }

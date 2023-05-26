@@ -10,13 +10,8 @@
   
   <form></form>
 
-  <div class="story-box">
-    <h1 class="title">Story Title</h1>
-    <p></p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ducimus minus deleniti temporibus ea velit, beatae ex ipsum adipisci molestias deserunt quaerat numquam natus sed quae praesentium quam at possimus.</p>
-    <p>Aliquam suscipit gravida ex sed congue. Aliquam scelerisque orci eget libero aliquam euismod. Pellentesque et bibendum nisl. Proin convallis massa eu ex volutpat consectetur. Aliquam vulputate eget nulla id euismod. Aenean sagittis vel justo vel finibus. Duis luctus sem sit amet erat condimentum, et sollicitudin purus porttitor. Vestibulum tempor ornare sodales. Vivamus faucibus massa vitae lectus mollis pharetra. Sed fringilla luctus orci. Proin egestas nec ante vel pharetra.</p>
-    <p>Quisque ac sapien ornare, porta augue id, efficitur ipsum. Nulla lacus dui, molestie et diam vel, feugiat tincidunt nibh. Nunc vitae tincidunt elit. Aliquam ut turpis quis nisl efficitur rutrum sed eu metus. In vitae nulla id orci egestas interdum at in ligula. Quisque felis quam, consequat eget varius eget, pretium ut sapien. Curabitur et porta felis. Etiam sit amet fringilla ex. Quisque non libero ornare, consequat ipsum eu, tempus diam. Sed viverra dui placerat ante mattis placerat. Phasellus lacus tellus, iaculis et tempus nec, vulputate quis nisi. Integer ultrices sagittis felis. Sed molestie auctor orci, eget viverra dolor pretium non. Donec et finibus diam, congue semper erat. Aliquam ac mauris porta, tempus purus nec, vestibulum justo.</p>
-    <p>Vivamus lacinia semper massa id sagittis. Morbi sed justo odio. Maecenas ultrices mauris at mauris euismod, sit amet gravida diam lobortis. Aliquam at ornare eros. Etiam dignissim ut turpis nec hendrerit. Aenean eget ante ipsum. Duis in justo vel eros viverra tempus. Duis cursus eros vitae accumsan elementum. Nunc eu nunc sed erat egestas condimentum. Fusce porta imperdiet turpis, ut cursus lacus lacinia posuere. Aenean eleifend posuere rutrum. Curabitur non lorem eleifend lectus facilisis consequat. Mauris sit amet suscipit ligula. Pellentesque eget tempus turpis.</p>
+  <div class="story-box" id="myTextarea">
+    <div id="storyText" class="paragraphs"></div>
   </div>
 
   <div class="navbar" id="myNavbar">
@@ -24,15 +19,12 @@
     <div class="navbar-element">
       <div class="dropdown">
         <div class="dropdown-toggle" onclick="toggleDropdown()">
-          <img class="flag-selected-image" src="images/flags/es.png" alt="es" id="selected-language">
+          <img class="flag-selected-image" src="images/menu/fontM.png" alt="Medium" id="selected-font-size">
         </div>
         <div class="dropdown-content">
-          <img class="flag-image" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
-          <img class="flag-image" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
-          <img class="flag-image" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
-          <img class="flag-image" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
-          <img class="flag-image" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')">
-          <img class="flag-image"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
+          <img class="flag-image" src="images/menu/fontS.png" alt="fontS" onclick="selectFontSize(this, 'fontS')">
+        <img class="flag-image" src="images/menu/fontM.png" alt="fontM" onclick="selectFontSize(this, 'fontM')">
+        <img class="flag-image" src="images/menu/fontL.png" alt="fontL" onclick="selectFontSize(this, 'fontL')">
         </div>
       </div>
     </div>

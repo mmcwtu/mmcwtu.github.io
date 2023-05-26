@@ -53,33 +53,33 @@ function clearFields() {
     moral.checked = false;
 }
 
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'translations.json', true);
-xhr.onload = function () {
-  if (xhr.status === 200) {
-    var translations = JSON.parse(xhr.responseText);
-    var langElements = document.querySelectorAll('[data-lang]');
+// var xhr = new XMLHttpRequest();
+// xhr.open('GET', 'translations.json', true);
+// xhr.onload = function () {
+//   if (xhr.status === 200) {
+//     var translations = JSON.parse(xhr.responseText);
+//     var langElements = document.querySelectorAll('[data-lang]');
 
-    function translateElements(lang) {
-      for (var i = 0; i < langElements.length; i++) {
-        var element = langElements[i];
-        var key = element.dataset.lang;
-        if (key) {
-          element.textContent = translations[lang][key] || translations['en'][key];
-        }
-      }
-    }
+//     function translateElements(lang) {
+//       for (var i = 0; i < langElements.length; i++) {
+//         var element = langElements[i];
+//         var key = element.dataset.lang;
+//         if (key) {
+//           element.textContent = translations[lang][key] || translations['en'][key];
+//         }
+//       }
+//     }
 
-    document.getElementById('language').addEventListener('change', function () {
-      var lang = this.value;
-      translateElements(lang);
-    });
+//     document.getElementById('language').addEventListener('change', function () {
+//       var lang = this.value;
+//       translateElements(lang);
+//     });
 
-    var defaultLang = 'en'; //default language
-    translateElements(defaultLang);
-  }
-};
-xhr.send();
+//     var defaultLang = 'en'; //default language
+//     translateElements(defaultLang);
+//   }
+// };
+// xhr.send();
 
 function selectImage(image) {
   if (selectedImage) {
@@ -99,16 +99,20 @@ function goBack() {
 
 document.addEventListener('DOMContentLoaded', function() {
   translatePage(true);
+  var defaultImage = document.querySelector('.dropdown-content img:first-child');
+  defaultImage.classList.add('selected');
+
+  changeFontSize(true);
 });
 
-function changeLanguage(lang) {
-  localStorage.setItem('selectedLanguage', lang);
-  translatePage(true);
+function selectDefaultFontSize() {
+  const selectedLanguage = localStorage.getItem('fontSize');
+  const imageElement = document.getElementById('selected-font-size');
+  imageElement.src = "images/menu/" + selectedLanguage + ".png";
 }
 
 function translatePage(fromEventListener) {
   const selectedLanguage = localStorage.getItem('selectedLanguage');
-  console.log('Selected language:', selectedLanguage);
   if (selectedLanguage) {
     fetch('translations.json')
       .then(response => response.json())
@@ -128,8 +132,35 @@ function translatePage(fromEventListener) {
 
       if (fromEventListener) {
         const imageElement = document.getElementById('selected-language');
-        imageElement.src = "images/flags/" + selectedLanguage + ".png";
+        if (imageElement != null) {
+          imageElement.src = "images/flags/" + selectedLanguage + ".png";
+        }
       }
+  }
+}
+
+function changeFontSize(fromEventListener) {
+  const selectedFontSize = localStorage.getItem('fontSize');
+  console.info(selectedFontSize)
+  var textArea = document.getElementById("storyText");
+
+  switch (selectedFontSize) {
+    case "fontS":
+      textArea.style.fontSize = "12px";
+      break;
+    case "fontM":
+      textArea.style.fontSize = "16px";
+      break;
+    case "fontL":
+      textArea.style.fontSize = "20px";
+      break;
+  }
+
+  if (fromEventListener) {
+    const imageElement = document.getElementById('selected-font-size');
+    if (imageElement != null) {
+      imageElement.src = "images/menu/" + selectedFontSize + ".png";
+    }
   }
 }
 
@@ -150,10 +181,17 @@ function selectLanguage(image, lang) {
   dropdownContent.classList.remove('show');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  var defaultImage = document.querySelector('.dropdown-content img:first-child');
-  defaultImage.classList.add('selected');
-});
+function selectFontSize(image, size) {
+  var selectedImage = image.cloneNode(true);
+  var toggleButton = document.querySelector('.dropdown-toggle');
+  selectedImage.classList.remove('flag-image-border');
+  toggleButton.innerHTML = selectedImage.outerHTML;
+  localStorage.setItem('fontSize', size);
+  changeFontSize(false);
+
+  var dropdownContent = document.querySelector('.dropdown-content');
+  dropdownContent.classList.remove('show');
+}
 
 function countCharacters() {
   var textarea = document.getElementById("myTextarea");
@@ -163,8 +201,18 @@ function countCharacters() {
   counter.textContent = maxLength - currentLength;
 
   if (currentLength > maxLength) {
-    counter.style.color = "red"; // Optional: Change counter color if limit exceeded
+    counter.style.color = "red";
   } else {
-    counter.style.color = ""; // Reset counter color if within limit
+    counter.style.color = "";
   }
 }
+
+window.onload = function() {
+  // Text coming from GPT
+  var apiText = "Title\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ducimus minus deleniti temporibus ea velit, beatae ex ipsum adipisci molestias deserunt quaerat numquam natus sed quae praesentium quam at possimus.\n\nAliquam suscipit gravida ex sed congue. Aliquam scelerisque orci eget libero aliquam euismod. Pellentesque et bibendum nisl. Proin convallis massa eu ex volutpat consectetur. Aliquam vulputate eget nulla id euismod. Aenean sagittis vel justo vel finibus. Duis luctus sem sit amet erat condimentum, et sollicitudin purus porttitor. Vestibulum tempor ornare sodales. Vivamus faucibus massa vitae lectus mollis pharetra. Sed fringilla luctus orci. Proin egestas nec ante vel pharetra.\n\nQuisque ac sapien ornare, porta augue id, efficitur ipsum. Nulla lacus dui, molestie et diam vel, feugiat tincidunt nibh. Nunc vitae tincidunt elit. Aliquam ut turpis quis nisl efficitur rutrum sed eu metus. In vitae nulla id orci egestas interdum at in ligula. Quisque felis quam, consequat eget varius eget, pretium ut sapien. Curabitur et porta felis. Etiam sit amet fringilla ex. Quisque non libero ornare, consequat ipsum eu, tempus diam. Sed viverra dui placerat ante mattis placerat. Phasellus lacus tellus, iaculis et tempus nec, vulputate quis nisi. Integer ultrices sagittis felis. Sed molestie auctor orci, eget viverra dolor pretium non. Donec et finibus diam, congue semper erat. Aliquam ac mauris porta, tempus purus nec, vestibulum justo.\n\nVivamus lacinia semper massa id sagittis. Morbi sed justo odio. Maecenas ultrices mauris at mauris euismod, sit amet gravida diam lobortis. Aliquam at ornare eros. Etiam dignissim ut turpis nec hendrerit. Aenean eget ante ipsum. Duis in justo vel eros viverra tempus. Duis cursus eros vitae accumsan elementum. Nunc eu nunc sed erat egestas condimentum. Fusce porta imperdiet turpis, ut cursus lacus lacinia posuere. Aenean eleifend posuere rutrum. Curabitur non lorem eleifend lectus facilisis consequat. Mauris sit amet suscipit ligula. Pellentesque eget tempus turpis.";
+
+  var formattedText = apiText.replace(/\n/g, "<br>");
+
+  var textDiv = document.getElementById("storyText");
+  textDiv.innerHTML = formattedText;
+};
