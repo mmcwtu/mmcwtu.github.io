@@ -189,7 +189,7 @@ function hideWelcomePage() {
   
     setTimeout(function() {
       overlay.classList.add("fade-out");
-    }, 1500);
+    }, 2000);
   }
 }
 
