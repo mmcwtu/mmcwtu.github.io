@@ -247,7 +247,7 @@ text-indent: -15px;
 
 .centered-bottom-button {
   position: absolute;
-  top: 90%;
+  top: 88%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -565,7 +565,7 @@ textarea {
 }
 
 .fade-out {
-  animation: fade-out 1s ease-in-out forwards;
+  animation: fade-out 3s ease-in-out forwards;
 }
 
 @keyframes fade-out {

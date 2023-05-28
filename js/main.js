@@ -189,7 +189,7 @@ function hideWelcomePage() {
   
     setTimeout(function() {
       overlay.classList.add("fade-out");
-    }, 1500);
+    }, 1000);
   }
 }
 
@@ -259,7 +259,7 @@ window.onload = function() {
 function pageTransition(page, image) {
   setTimeout(function() {
     window.location.href = page; // Replace with your desired URL
-  }, 300); // Adjust the timeout duration to match the transition duration in CSS
+  }, 500); // Adjust the timeout duration to match the transition duration in CSS
 
   selectImage(image)
 }
