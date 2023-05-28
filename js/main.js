@@ -2,12 +2,103 @@ const form = document.querySelector('form');
 const loadingOverlay = document.getElementById('loading-overlay');
 const storyOverlay = document.getElementById('story-overlay');
 const storyType = document.querySelector('#storyType');
-const moral = document.querySelector('#moral');
-const characterName = document.querySelector('#name');
-var language = "en";
 var selectedImage = null;
+var imageForSubmit = ""; 
 const urlParams = new URLSearchParams(window.location.search);
 const pageParam = urlParams.get('prev');
+
+const myMap = new Map([
+  ['en', 'english'],
+  ['es', 'spanish'],
+  ['it', 'italian']
+]);
+
+document.addEventListener('DOMContentLoaded', function() {
+  translatePage(true);
+
+  changeFontSize(true);
+
+  hideWelcomePage();
+
+  // submitStory();
+});
+
+// function submitStory() {
+//   var form = document.getElementById("form");
+//   if (form != null) {
+//     var submitImage = document.getElementById("submitImage");
+
+//     submitImage.addEventListener("click", function(event) {
+//       event.preventDefault();
+//       form.dispatchEvent(new Event('submit'));
+//     });
+  
+//     form.addEventListener('submit', async function(event) {
+//       event.preventDefault();
+      
+//       const characterName = document.getElementById('name') == null? "" : document.getElementById('name').value;
+  
+//       const data = { 
+//         characterName: characterName, 
+//         storyType: selectedImage,
+//         lang: localStorage.getItem("selectedLanguage")
+//       };
+  
+//       try {
+//         console.info("______AAAA______");
+//         console.info(JSON.parse(JSON.parse(data).text));
+//         await submitForm(); // Example function for form submission
+//       } catch (error) {
+//         // Handle any errors that occur during form submission
+//       }
+//     });
+  
+//     async function submitForm() {
+//       // Asynchronous form submission logic
+//       // You can perform data validation, make API requests, etc.
+//     }
+//   }
+// }
+
+async function pepe() {
+  console.info("______QQQQQ______");
+  const characterName = document.getElementById('name') == null? "" : document.getElementById('name').value;
+  
+  const data = { 
+    characterName: characterName, 
+    storyType: imageForSubmit,
+    lang: "spanish"
+  };
+
+  try {
+    console.info("______AAAA______");
+    console.info(characterName);
+    console.info(imageForSubmit);
+    console.info(localStorage.getItem("selectedLanguage"));
+    console.info("_____BBB_______");
+    // await submitForm(); // Example function for form submission
+
+    const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/cuentos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+    const responseBody = await responseObj.json();
+    const responseObject = JSON.parse(JSON.parse(responseBody.body).text);
+    const responseTitle = responseObject.title;
+    const responseText = responseObject.text;
+
+    console.info("______XXXXX______");
+    console.info(responseObject.title);
+    console.info(responseObject.text);
+    console.info("_____YYYYY_______");
+
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 // form.addEventListener('submit', async (event) => {
 //   event.preventDefault();
@@ -82,6 +173,7 @@ function clearFields() {
 // xhr.send();
 
 function selectImage(image) {
+  imageForSubmit = image.getAttribute("alt");
   if (selectedImage) {
     selectedImage.classList.remove("selected-image");
   }
@@ -96,14 +188,6 @@ function goBack() {
     window.location.href = pageParam + '.html';
   }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  translatePage(true);
-
-  changeFontSize(true);
-
-  hideWelcomePage();
-});
 
 function selectDefaultFontSize() {
   const selectedLanguage = localStorage.getItem('fontSize');
@@ -185,11 +269,12 @@ function hideWelcomePage() {
       overlay.style.display = "none";
       localStorage.setItem('welcomeShown', true);
       window.location.href = "home.html";
+      localStorage.setItem('selectedLanguage', "es");
     });
   
     setTimeout(function() {
       overlay.classList.add("fade-out");
-    }, 2000);
+    }, 1000);
   }
 }
 
@@ -258,8 +343,8 @@ window.onload = function() {
 
 function pageTransition(page, image) {
   setTimeout(function() {
-    window.location.href = page; // Replace with your desired URL
-  }, 300); // Adjust the timeout duration to match the transition duration in CSS
+    window.location.href = page;
+  }, 300);
 
   selectImage(image)
 }
