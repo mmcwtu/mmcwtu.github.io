@@ -9,51 +9,83 @@
 <body>
   <form>
 
-    <h1 data-lang="newStoryOptionLabel">Nueva Historia</h1>
+    <h1 class="page-title" data-lang="newStoryOptionLabel">Nueva Historia</h1>
 
-    <div data-lang="characterLabel">Nombre del personaje principal:</div>
+    <div class="label-margin" data-lang="characterLabel">Nombre del personaje principal:</div>
 
     <div class="control">
       <input class="text-field" type="text" id="name" placeholder="">
     </div>
       
-    <div data-lang="storyTypeLabel">Tipo de cuento:</div>
+    <div class="label-margin" data-lang="storyTypeLabel">Tipo de cuento:</div>
 
     <div class="center-content">
+      <div class="cards-container">
+        <div class="cards-scrollable">
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/storyTypes/fantasticSq.png" alt="fantastic" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeLabelFantastic">Fantástico</div>
+          </div>
+  
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/storyTypes/horrorSq.png" alt="horror" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeLabelHorror">Terror</div>
+          </div>
+  
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/storyTypes/scifiSq.png" alt="scifi" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeLabelSciFi">Ciencia ficción</div>
+          </div>
+
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/storyTypes/adventureSq.png" alt="adventure" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeLabelRealistic">Aventura</div>
+          </div>
+    
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/storyTypes/mysterySq.png" alt="mystery" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeLabelDetective">Misterio</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="center-content">
 
       <div class="scrollable-container">
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/storyTypes/fantasticSmall.png" alt="fantastic" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeFantastic">Fantástico</div>
+          <div class="image-text-story" data-lang="storyTypeLabelFantastic">Fantástico</div>
         </div>
 
         <div class="image-text-container">
           <img class="unselected-image" src="images/storyTypes/princessSmall.png" alt="princess" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypePrincess">Princesas</div>
+          <div class="image-text-story" data-lang="storyTypeLabelPrincess">Princesas</div>
         </div>
 
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/storyTypes/horrorSmall.png" alt="horror" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeHorror">Terror</div>
+          <div class="image-text-story" data-lang="storyTypeLabelHorror">Terror</div>
         </div>
   
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/storyTypes/scifiSmall.png" alt="scifi" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeSciFi">Ciencia ficción</div>
+          <div class="image-text-story" data-lang="storyTypeLabelSciFi">Ciencia ficción</div>
         </div>
   
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/storyTypes/adventureSmall.png" alt="adventure" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeRealistic">Aventura</div>
+          <div class="image-text-story" data-lang="storyTypeLabelRealistic">Aventura</div>
         </div>
   
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/storyTypes/mysterySmall.png" alt="mystery" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeDetective">Misterio</div>
+          <div class="image-text-story" data-lang="storyTypeLabelDetective">Misterio</div>
         </div>
       </div>
 
-    </div>
+    </div> -->
 
     <div class="centered-bottom-button">
       <a href="story.html?prev=newStory">
@@ -67,7 +99,7 @@
 
   <div class="navbar" id="myNavbar">
 
-    <div class="navbar-element">
+    <div class="navbar-element navbar-element-left">
       <div class="dropdown">
         <div class="dropdown-toggle" onclick="toggleDropdown()">
           <img class="flag-selected-image" src="images/flags/es.png" alt="es" id="selected-language">
@@ -83,13 +115,13 @@
       </div>
     </div>
 
-    <div class="navbar-element">
+    <!-- <div class="navbar-element">
       <div class="dropdown">
         <div class="dropdown-toggle">
           <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="navbar-element">
       <div class="dropdown">
@@ -101,7 +133,7 @@
       </div>
     </div>
 
-    <div class="navbar-element">
+    <div class="navbar-element navbar-element-right">
       <div class="dropdown">
         <div class="dropdown-toggle">
           <a href="contact.html?prev=newStory">

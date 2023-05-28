@@ -66,8 +66,8 @@ text-indent: -15px;
 .scrollable-container {
   width: 90%;
   height: 40vh;
-  overflow-y: auto;
-  flex-direction: column;
+  overflow-x: scroll;
+  /* flex-direction: row; */
   margin-block: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5%;
@@ -77,7 +77,7 @@ text-indent: -15px;
   width: 90%;
   height: 50vh;
   overflow-y: auto;
-  flex-direction: column;
+  flex-direction: row;
   margin-block: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5%;
@@ -106,24 +106,24 @@ text-indent: -15px;
 
 .unselected-image {
   border: 1px solid rgb(121, 121, 121);
-  opacity: 0.75;
+  opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
-  max-width: 95%;
+  max-width: 80vw;
   border-radius: 5vw;
-  margin-block: 5px;
+  margin-inline: 5px;
 }
 
 .selected-image {
-  border: 1px solid rgb(30, 30, 30);
+  border: 2px solid rgb(30, 30, 30);
   opacity: 1;
-  max-width: 95%;
+  max-width: 80vw;
   border-radius: 5vw;
-  margin-block: 5px;
+  margin-inline: 5px;
 }
 
 .image-text-story {
   position: absolute;
-  top: 75%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0px;
@@ -147,9 +147,9 @@ text-indent: -15px;
   max-width: 90%;
 }
 
-.image-text-container {
+.image-with-text-container {
   position: relative;
-  display: inline-block;
+  display: flex;
 }
 
 .image-text {
@@ -273,7 +273,6 @@ text-indent: -15px;
   font-family: "Nunito";
   outline: none;
   transition: border-color 0.3s ease;
-  margin: 10px;
 }
 
 .text-field:focus {
@@ -284,13 +283,11 @@ text-indent: -15px;
   width: 95vw;
   height: 75vh;
   overflow-y: auto;
-  background-color: rgba(255, 255, 255, 0.4);
   flex-direction: column;
-  border-radius: 5px;
-  border: 1px solid #ccc;
   margin: 10px;
-  text-align: justify;
-  text-justify: inter-word;
+  text-align: left;
+  /* text-align: justify;
+  text-justify:distribute; */
   font-family: "Nunito";
 }
 
@@ -427,6 +424,13 @@ footer {
   margin-inline: 3vh;
 }
 
+.navbar-element-right {
+  float: right;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
 .navbar .icon {
   display: none;
 }
@@ -511,4 +515,27 @@ textarea {
   width: 2rem;
   height: 13.5rem;
   margin-left: 0.1rem;
+}
+
+.cards-container {
+  width: 90%;
+  overflow-x: scroll;
+}
+
+.cards-scrollable {
+  display: flex;
+  padding-block: 1vh;
+}
+
+.label-margin {
+  margin-top: 4vh;
+  margin-bottom: 1.5vh;
+}
+
+.page-title {
+  margin-block: 5vh;
+}
+
+.top-margin {
+  margin-top: 15vh;
 }

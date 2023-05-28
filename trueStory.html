@@ -9,33 +9,60 @@
 <body>
   <form>
 
-    <h1 data-lang="trueStoryOptionLabel">Historia Real</h1>
+    <h1 class="page-title" data-lang="trueStoryOptionLabel">Historia Real</h1>
 
-    <div class="center-content">
+    <div class="center-content top-margin">
+      <div class="cards-container">
+        <div class="cards-scrollable">
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/trueStory/planeSq.png" alt="plane" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypePlane">Hermanos Wright</div>
+          </div>
+  
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/trueStory/apoloSq.png" alt="apolo" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeApolo">Apolo 11</div>
+          </div>
+  
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/trueStory/steamSq.png" alt="steam" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeSteam">Máquina de vapor</div>
+          </div>
+  
+          <div class="image-with-text-container">
+            <img class="unselected-image" src="images/trueStory/columbusSq.png" alt="columbus" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeColumbus">Cristóbal Colón</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="center-content">
 
       <div class="scrollable-container-big">
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/trueStory/planeSmall.png" alt="plane" onclick="selectImage(this)">
           <div class="image-text-story" data-lang="storyTypePlane">Wright Brothers</div>
         </div>
 
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/trueStory/apoloSmall.png" alt="apolo" onclick="selectImage(this)">
           <div class="image-text-story" data-lang="storyTypeApolo">Apolo 11</div>
         </div>
 
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/trueStory/steamSmall.png" alt="steam" onclick="selectImage(this)">
           <div class="image-text-story" data-lang="storyTypeSteam">Steam engine</div>
         </div>
 
-        <div class="image-text-container">
+        <div class="image-with-text-container">
           <img class="unselected-image" src="images/trueStory/columbusSmall.png" alt="columbus" onclick="selectImage(this)">
           <div class="image-text-story" data-lang="storyTypeColumbus">Columbus</div>
         </div>
       </div>
 
-    </div>
+    </div> -->
 
     <div class="centered-bottom-button">
       <a href="story.html?prev=trueStory">
@@ -49,7 +76,7 @@
 
   <div class="navbar" id="myNavbar">
 
-    <div class="navbar-element">
+    <div class="navbar-element navbar-element-left">
       <div class="dropdown">
         <div class="dropdown-toggle" onclick="toggleDropdown()">
           <img class="flag-selected-image" src="images/flags/es.png" alt="es" id="selected-language">
@@ -65,35 +92,35 @@
       </div>
     </div>
 
-    <div class="navbar-element">
+    <!-- <div class="navbar-element">
       <div class="dropdown">
         <div class="dropdown-toggle">
           <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="navbar-element">
       <div class="dropdown">
         <div class="dropdown-toggle">
-          <a href="index.html?prev=trueStory">
+          <a href="index.html?prev=index">
             <img class="flag-image pepe"src="images/menu/home.png" alt="home">
           </a>
         </div>
       </div>
     </div>
 
-    <div class="navbar-element">
+    <div class="navbar-element navbar-element-right">
       <div class="dropdown">
         <div class="dropdown-toggle">
-          <a href="contact.html?prev=trueStory">
+          <a href="contact.html?prev=index">
             <img class="flag-image"src="images/menu/contact.png" alt="info">
           </a>
         </div>
       </div>
     </div>
 
-  </div>
+  </div>  
   
   <div id="loading-overlay" class="overlay loading">
     <p id="loading-text" data-lang="loadingLabel">Cargando...</p>
