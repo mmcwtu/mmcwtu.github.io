@@ -9,38 +9,38 @@ var selectedImage = null;
 const urlParams = new URLSearchParams(window.location.search);
 const pageParam = urlParams.get('prev');
 
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const data = { 
-    characterName: characterName.value, 
-    storyType: selectedImage,
-    moral: moral.checked,
-    seconds: "30",
-    lang: language.value
-  };
+// form.addEventListener('submit', async (event) => {
+//   event.preventDefault();
+//   const data = { 
+//     characterName: characterName.value, 
+//     storyType: selectedImage,
+//     moral: moral.checked,
+//     seconds: "30",
+//     lang: language.value
+//   };
 
-  // Show loading overlay
-  loadingOverlay.style.display = 'block';
+//   // Show loading overlay
+//   loadingOverlay.style.display = 'block';
 
-  const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/cuentos', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  });
-  const responseBody = await responseObj.json();
-  const responseObject = JSON.parse(JSON.parse(responseBody.body).text);
-  const responseTitle = responseObject.title;
-  const responseText = responseObject.text;
-  title.innerText = responseTitle;
-  output.innerText = responseText;
+//   const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/cuentos', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(data)
+//   });
+//   const responseBody = await responseObj.json();
+//   const responseObject = JSON.parse(JSON.parse(responseBody.body).text);
+//   const responseTitle = responseObject.title;
+//   const responseText = responseObject.text;
+//   title.innerText = responseTitle;
+//   output.innerText = responseText;
 
-  // Hide loading overlay
-  loadingOverlay.style.display = 'none';
-  // Show story overlay
-  storyOverlay.style.display = 'block';
-});
+//   // Hide loading overlay
+//   loadingOverlay.style.display = 'none';
+//   // Show story overlay
+//   storyOverlay.style.display = 'block';
+// });
 
 function closeOverlay() {
     var overlay = document.getElementById('story-overlay');
@@ -99,12 +99,10 @@ function goBack() {
 
 document.addEventListener('DOMContentLoaded', function() {
   translatePage(true);
-  var defaultImage = document.querySelector('.dropdown-content img:first-child');
-  defaultImage.classList.add('selected');
 
   changeFontSize(true);
-  var defaultImage = document.querySelector('.dropdown-content img:first-child');
-  defaultImage.classList.add('selected');
+
+  hideWelcomePage();
 });
 
 function selectDefaultFontSize() {
@@ -139,6 +137,11 @@ function translatePage(fromEventListener) {
         }
       }
   }
+
+  var defaultImage = document.querySelector('.dropdown-content img:first-child');
+  if (defaultImage != null) {
+    defaultImage.classList.add('selected');
+  }
 }
 
 function changeFontSize(fromEventListener) {
@@ -146,29 +149,53 @@ function changeFontSize(fromEventListener) {
   console.info(selectedFontSize)
   var textArea = document.getElementById("storyText");
 
-  switch (selectedFontSize) {
-    case "fontS":
-      textArea.style.fontSize = "16px";
-      break;
-    case "fontM":
-      textArea.style.fontSize = "20px";
-      break;
-    case "fontL":
-      textArea.style.fontSize = "24px";
-      break;
+  if (textArea != null) {
+    switch (selectedFontSize) {
+      case "fontS":
+        textArea.style.fontSize = "16px";
+        break;
+      case "fontM":
+        textArea.style.fontSize = "20px";
+        break;
+      case "fontL":
+        textArea.style.fontSize = "24px";
+        break;
+    }
+
+    if (fromEventListener) {
+      const imageElement = document.getElementById('selected-font-size');
+      if (imageElement != null) {
+        imageElement.src = "images/menu/" + selectedFontSize + ".png";
+      }
+    }
   }
 
-  if (fromEventListener) {
-    const imageElement = document.getElementById('selected-font-size');
-    if (imageElement != null) {
-      imageElement.src = "images/menu/" + selectedFontSize + ".png";
-    }
+  var defaultImage = document.querySelector('.dropdown-content img:first-child');
+
+  if (defaultImage != null) {
+    defaultImage.classList.add('selected');
+  }
+}
+
+function hideWelcomePage() {
+  var overlay = document.getElementById("overlay");
+
+  if (overlay != null) {
+    overlay.addEventListener("animationend", function() {
+      overlay.style.display = "none";
+      localStorage.setItem('welcomeShown', true);
+      window.location.href = "home.html";
+    });
+  
+    setTimeout(function() {
+      overlay.classList.add("fade-out");
+    }, 1500);
   }
 }
 
 function toggleDropdown() {
   var dropdownContent = document.querySelector("[class*='dropdown-content']");
-  console.info("LALALLALAL")
+  console.info("LALLLALAL")
   var isDisplayed = window.getComputedStyle(dropdownContent).getPropertyValue("display") === "block" ? true : false;
   console.info(window.getComputedStyle(dropdownContent).getPropertyValue("display"));
 
@@ -187,7 +214,7 @@ function selectLanguage(image, lang) {
   localStorage.setItem('selectedLanguage', lang);
   translatePage(false);
   
-  var dropdownContent = document.querySelector('.dropdown-content');
+  var dropdownContent = document.querySelector("[class*='dropdown-content']");
   dropdownContent.classList.remove('show');
 }
 
@@ -224,5 +251,15 @@ window.onload = function() {
   var formattedText = apiText.replace(/\n/g, "<br>");
 
   var textDiv = document.getElementById("storyText");
-  textDiv.innerHTML = formattedText;
+  if (textDiv != null) {
+    textDiv.innerHTML = formattedText;
+  }
 };
+
+function pageTransition(page, image) {
+  setTimeout(function() {
+    window.location.href = page; // Replace with your desired URL
+  }, 300); // Adjust the timeout duration to match the transition duration in CSS
+
+  selectImage(image)
+}

@@ -1,14 +1,11 @@
 .container {
-  width: 100%;
-  overflow-x: scroll;
-}
-
-.scrollable {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.scrollable img {
-  width: 300px; /* Adjust the width to fit your images */
-  height: auto; /* Adjust the height proportionally if needed */
-  margin-right: 10px; /* Adjust the spacing between images */
+#welcomeText {
+  opacity: 0;
+  animation: fade-out 0.5s linear;
 }

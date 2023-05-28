@@ -7,41 +7,29 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <form>
 
-    <h1 data-lang="contactUs">Contáctanos</h1>
+  <form></form>
 
-    <div data-lang="name">Nombre:</div>
-    <div class="control">
-      <input class="contact-text-field" type="text" id="name" placeholder="">
+  <h1 class="center-content">Page Name</h1>
+
+  <div class="main-menu-container center-content">
+    <div class="card-margin image-with-text-container">
+      <img class="unselected-image" src="images/mainMenu/newStorySmall.png" alt="newStory" onclick="pageTransition('newStory.html', this)">
+      <div class="image-text-story" data-lang="newStoryOptionLabel">Nueva Historia</div>
     </div>
-
-    <div data-lang="email">Email:</div>
-    <div class="control">
-      <input class="contact-text-field" type="text" id="email" placeholder="">
-    </div>
-      
-    <div data-lang="message">Mensaje:</div>
-    <textarea id="myTextarea" rows="7" cols="50" maxlength="500" oninput="countCharacters()"></textarea>
-    <div class="counter-container">
-      <div class="left-counter" id="counter">500</div>
-      <div class="right-counter" data-lang="maxCounter"> caracteres por escribir</div>
-    </div>
-    
-    <div class="centered-bottom-button contact-button">
-        <div class="center-content">
-          <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
-          <span class="custom-button-text" data-lang="send">Enviar</span>
-        </div>
-    </div>
-
-  </form>
-
-  <div class="credits-link">
-    <a href="credits.html?prev=contact">Credits</a>
-  </div>
-
   
+    <div class="card-margin image-with-text-container">
+      <img class="unselected-image" src="images/mainMenu/trueStorySmall.png" alt="trueStory" onclick="pageTransition('trueStory.html', this)">
+      <div class="image-text-story" data-lang="trueStoryOptionLabel">Historia Real</div>
+    </div>
+
+    <div class="card-margin image-with-text-container">
+      <img class="unselected-image" src="images/mainMenu/quickSmall.png" alt="quickStory" onclick="pageTransition('story.html', this)">
+      <div class="image-text-story" data-lang="quickStoryOptionLabel">Historia Rápida</div>
+    </div>
+  </div>
+  
+
   <div class="navbar" id="myNavbar">
 
     <div class="navbar-element navbar-element-left">
@@ -81,7 +69,7 @@
     </div>
 
   </div>
-  
+
   <script src="js/main.js"></script>
 </body>
 </html>
