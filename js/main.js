@@ -1,5 +1,4 @@
 const form = document.querySelector('form');
-const loadingOverlay = document.getElementById('loading-overlay');
 const storyOverlay = document.getElementById('story-overlay');
 const storyType = document.querySelector('#storyType');
 var selectedImage = null;
@@ -19,65 +18,21 @@ document.addEventListener('DOMContentLoaded', function() {
   changeFontSize(true);
 
   hideWelcomePage();
-
-  // submitStory();
 });
 
-// function submitStory() {
-//   var form = document.getElementById("form");
-//   if (form != null) {
-//     var submitImage = document.getElementById("submitImage");
-
-//     submitImage.addEventListener("click", function(event) {
-//       event.preventDefault();
-//       form.dispatchEvent(new Event('submit'));
-//     });
-  
-//     form.addEventListener('submit', async function(event) {
-//       event.preventDefault();
-      
-//       const characterName = document.getElementById('name') == null? "" : document.getElementById('name').value;
-  
-//       const data = { 
-//         characterName: characterName, 
-//         storyType: selectedImage,
-//         lang: localStorage.getItem("selectedLanguage")
-//       };
-  
-//       try {
-//         console.info("______AAAA______");
-//         console.info(JSON.parse(JSON.parse(data).text));
-//         await submitForm(); // Example function for form submission
-//       } catch (error) {
-//         // Handle any errors that occur during form submission
-//       }
-//     });
-  
-//     async function submitForm() {
-//       // Asynchronous form submission logic
-//       // You can perform data validation, make API requests, etc.
-//     }
-//   }
-// }
-
-async function pepe() {
-  console.info("______QQQQQ______");
+async function getStory() {
+  const loadingOverlay = document.getElementById('loading-overlay');
   const characterName = document.getElementById('name') == null? "" : document.getElementById('name').value;
   
   const data = { 
     characterName: characterName, 
     storyType: imageForSubmit,
-    storyLanguage: "spanish"
+    storyLanguage: myMap.get(localStorage.getItem("selectedLanguage"))
   };
 
-  try {
-    console.info("______AAAA______");
-    console.info(characterName);
-    console.info(imageForSubmit);
-    console.info(localStorage.getItem("selectedLanguage"));
-    console.info("_____BBB_______");
-    // await submitForm(); // Example function for form submission
+  loadingOverlay.style.display = 'block';
 
+  try {
     const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/cuentos', {
       method: 'POST',
       headers: {
@@ -85,53 +40,24 @@ async function pepe() {
       },
       body: JSON.stringify(data)
     });
-    const responseBody = await responseObj.json();
-    const responseObject = JSON.parse(JSON.parse(responseBody.body).text);
-    const responseTitle = responseObject.title;
-    const responseText = responseObject.text;
 
-    console.info("______XXXXX______");
-    console.info(responseObject.title);
-    console.info(responseObject.text);
-    console.info("_____YYYYY_______");
+    const responseData = await responseObj.json();
+    const body = responseData.body
+    const title = body.title;
+    const story = body.story;
+    const moral = body.moral;
 
+    localStorage.setItem("title", title);
+    localStorage.setItem("story", story);
+    localStorage.setItem("moral", moral);
   } catch (error) {
     console.error(error);
   }
+
+  loadingOverlay.style.display = 'none';
+
+  window.location.href = "story.html";
 }
-
-// form.addEventListener('submit', async (event) => {
-//   event.preventDefault();
-//   const data = { 
-//     characterName: characterName.value, 
-//     storyType: selectedImage,
-//     moral: moral.checked,
-//     seconds: "30",
-//     lang: language.value
-//   };
-
-//   // Show loading overlay
-//   loadingOverlay.style.display = 'block';
-
-//   const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/cuentos', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(data)
-//   });
-//   const responseBody = await responseObj.json();
-//   const responseObject = JSON.parse(JSON.parse(responseBody.body).text);
-//   const responseTitle = responseObject.title;
-//   const responseText = responseObject.text;
-//   title.innerText = responseTitle;
-//   output.innerText = responseText;
-
-//   // Hide loading overlay
-//   loadingOverlay.style.display = 'none';
-//   // Show story overlay
-//   storyOverlay.style.display = 'block';
-// });
 
 function closeOverlay() {
     var overlay = document.getElementById('story-overlay');
@@ -144,34 +70,6 @@ function clearFields() {
     moral.checked = false;
 }
 
-// var xhr = new XMLHttpRequest();
-// xhr.open('GET', 'translations.json', true);
-// xhr.onload = function () {
-//   if (xhr.status === 200) {
-//     var translations = JSON.parse(xhr.responseText);
-//     var langElements = document.querySelectorAll('[data-lang]');
-
-//     function translateElements(lang) {
-//       for (var i = 0; i < langElements.length; i++) {
-//         var element = langElements[i];
-//         var key = element.dataset.lang;
-//         if (key) {
-//           element.textContent = translations[lang][key] || translations['en'][key];
-//         }
-//       }
-//     }
-
-//     document.getElementById('language').addEventListener('change', function () {
-//       var lang = this.value;
-//       translateElements(lang);
-//     });
-
-//     var defaultLang = 'en'; //default language
-//     translateElements(defaultLang);
-//   }
-// };
-// xhr.send();
-
 function selectImage(image) {
   imageForSubmit = image.getAttribute("alt");
   if (selectedImage) {
@@ -179,14 +77,6 @@ function selectImage(image) {
   }
   selectedImage = image;
   selectedImage.classList.add("selected-image");
-}
-
-function goBack() {
-  if (pageParam === null) {
-    window.location.href = 'index.html';
-  } else {
-    window.location.href = pageParam + '.html';
-  }
 }
 
 function selectDefaultFontSize() {
@@ -280,7 +170,6 @@ function hideWelcomePage() {
 
 function toggleDropdown() {
   var dropdownContent = document.querySelector("[class*='dropdown-content']");
-  console.info("LALLLALAL")
   var isDisplayed = window.getComputedStyle(dropdownContent).getPropertyValue("display") === "block" ? true : false;
   console.info(window.getComputedStyle(dropdownContent).getPropertyValue("display"));
 
@@ -329,22 +218,29 @@ function countCharacters() {
   }
 }
 
-window.onload = function() {
-  // Text coming from GPT
-  var apiText = "Title\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ducimus minus deleniti temporibus ea velit, beatae ex ipsum adipisci molestias deserunt quaerat numquam natus sed quae praesentium quam at possimus.\n\nAliquam suscipit gravida ex sed congue. Aliquam scelerisque orci eget libero aliquam euismod. Pellentesque et bibendum nisl. Proin convallis massa eu ex volutpat consectetur. Aliquam vulputate eget nulla id euismod. Aenean sagittis vel justo vel finibus. Duis luctus sem sit amet erat condimentum, et sollicitudin purus porttitor. Vestibulum tempor ornare sodales. Vivamus faucibus massa vitae lectus mollis pharetra. Sed fringilla luctus orci. Proin egestas nec ante vel pharetra.\n\nQuisque ac sapien ornare, porta augue id, efficitur ipsum. Nulla lacus dui, molestie et diam vel, feugiat tincidunt nibh. Nunc vitae tincidunt elit. Aliquam ut turpis quis nisl efficitur rutrum sed eu metus. In vitae nulla id orci egestas interdum at in ligula. Quisque felis quam, consequat eget varius eget, pretium ut sapien. Curabitur et porta felis. Etiam sit amet fringilla ex. Quisque non libero ornare, consequat ipsum eu, tempus diam. Sed viverra dui placerat ante mattis placerat. Phasellus lacus tellus, iaculis et tempus nec, vulputate quis nisi. Integer ultrices sagittis felis. Sed molestie auctor orci, eget viverra dolor pretium non. Donec et finibus diam, congue semper erat. Aliquam ac mauris porta, tempus purus nec, vestibulum justo.\n\nVivamus lacinia semper massa id sagittis. Morbi sed justo odio. Maecenas ultrices mauris at mauris euismod, sit amet gravida diam lobortis. Aliquam at ornare eros. Etiam dignissim ut turpis nec hendrerit. Aenean eget ante ipsum. Duis in justo vel eros viverra tempus. Duis cursus eros vitae accumsan elementum. Nunc eu nunc sed erat egestas condimentum. Fusce porta imperdiet turpis, ut cursus lacus lacinia posuere. Aenean eleifend posuere rutrum. Curabitur non lorem eleifend lectus facilisis consequat. Mauris sit amet suscipit ligula. Pellentesque eget tempus turpis.";
-
-  var formattedText = apiText.replace(/\n/g, "<br>");
-
-  var textDiv = document.getElementById("storyText");
-  if (textDiv != null) {
-    textDiv.innerHTML = formattedText;
-  }
-};
-
 function pageTransition(page, image) {
   setTimeout(function() {
     window.location.href = page;
   }, 300);
 
   selectImage(image)
+}
+
+function showDataOnPage() {
+  const title = localStorage.getItem('title');
+  const story = localStorage.getItem('story');
+  const moral = localStorage.getItem('moral');
+
+  document.getElementById('storyText').innerHTML = `
+    <h1>${title}</h1>
+    <p>${story}</p>
+    <br>
+    <div class="paragraphs" data-lang="moralLabel">Moraleja</div>
+    <p>${moral}</p>
+  `;
+
+}
+
+if (window.location.pathname === '/story.html') {
+  window.onload = showDataOnPage();
 }

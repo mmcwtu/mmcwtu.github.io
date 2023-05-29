@@ -23,8 +23,8 @@
       <div class="cards-container">
         <div class="cards-scrollable">
           <div class="image-with-text-container">
-            <img class="unselected-image" src="images/storyTypes/fantasticSq.png" alt="fantasy" onclick="selectImage(this)">
-            <div class="image-text-story" data-lang="storyTypeLabelFantastic">Fantástico</div>
+            <img class="unselected-image" src="images/storyTypes/fantasySq.png" alt="fantasy" onclick="selectImage(this)">
+            <div class="image-text-story" data-lang="storyTypeLabelFantasy">Fantasía</div>
           </div>
   
           <div class="image-with-text-container">
@@ -51,49 +51,11 @@
       </div>
     </div>
 
-    <!-- <div class="center-content">
-
-      <div class="scrollable-container">
-        <div class="image-with-text-container">
-          <img class="unselected-image" src="images/storyTypes/fantasticSmall.png" alt="fantastic" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeLabelFantastic">Fantástico</div>
-        </div>
-
-        <div class="image-text-container">
-          <img class="unselected-image" src="images/storyTypes/princessSmall.png" alt="princess" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeLabelPrincess">Princesas</div>
-        </div>
-
-        <div class="image-with-text-container">
-          <img class="unselected-image" src="images/storyTypes/horrorSmall.png" alt="horror" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeLabelHorror">Terror</div>
-        </div>
-  
-        <div class="image-with-text-container">
-          <img class="unselected-image" src="images/storyTypes/scifiSmall.png" alt="scifi" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeLabelSciFi">Ciencia ficción</div>
-        </div>
-  
-        <div class="image-with-text-container">
-          <img class="unselected-image" src="images/storyTypes/adventureSmall.png" alt="adventure" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeLabelRealistic">Aventura</div>
-        </div>
-  
-        <div class="image-with-text-container">
-          <img class="unselected-image" src="images/storyTypes/mysterySmall.png" alt="mystery" onclick="selectImage(this)">
-          <div class="image-text-story" data-lang="storyTypeLabelDetective">Misterio</div>
-        </div>
-      </div>
-
-    </div> -->
-
     <div class="centered-bottom-button">
-      <!-- <a href="story.html"> -->
-        <div class="center-content" onclick="pepe()">
-          <img class="custom-button-image" src="images/create.png" alt="start" type="submit" onclick="pepe()">
-          <span class="custom-button-text" data-lang="generateButton">Crear</span>
-        </div>
-      <!-- </a> -->
+      <div class="center-content" onclick="getStory()">
+        <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
+        <span class="custom-button-text" data-lang="generateButton">Crear</span>
+      </div>
     </div>
   </form>
 
@@ -114,14 +76,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="navbar-element">
-      <div class="dropdown">
-        <div class="dropdown-toggle">
-          <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
-        </div>
-      </div>
-    </div> -->
 
     <div class="navbar-element">
       <div class="dropdown">
@@ -144,17 +98,12 @@
     </div>
 
   </div>
-  
-  <!-- <div id="loading-overlay" class="overlay loading">
-    <p id="loading-text" data-lang="loadingLabel">Cargando...</p>
+
+  <div id="loading-overlay" class="loading-overlay">
+    <p class="loading-text" id="loading-text" data-lang="loadingLabel">Cargando...</p>
+    <progress class="loading-text"></progress>
   </div>
-
-  <div id="story-overlay" class="overlay story" display="none">
-    <h1 id="title"></h1>
-    <span id="close-button" onclick="closeOverlay()">✕</span>
-    <p id="output"></p>
-  </div> -->
-
+  
   <script src="js/main.js"></script>
 </body>
 </html>
