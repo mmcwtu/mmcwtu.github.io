@@ -14,23 +14,23 @@
     <div class="center-content top-margin">
       <div class="cards-container">
         <div class="cards-scrollable">
-          <div class="image-with-text-container">
-            <img class="unselected-image" src="images/trueStory/planeSq.png" alt="plane" onclick="selectImage(this)">
+          <div class="image-with-text-container" onclick="selectCard('plane')">
+            <img class="unselected-image" src="images/trueStory/planeSq.png" alt="plane">
             <div class="image-text-story" data-lang="storyTypePlane">Hermanos Wright</div>
           </div>
   
-          <div class="image-with-text-container">
-            <img class="unselected-image" src="images/trueStory/apoloSq.png" alt="apolo" onclick="selectImage(this)">
+          <div class="image-with-text-container" onclick="selectCard('apolo')">
+            <img class="unselected-image" src="images/trueStory/apoloSq.png" alt="apolo">
             <div class="image-text-story" data-lang="storyTypeApolo">Apolo 11</div>
           </div>
   
-          <div class="image-with-text-container">
-            <img class="unselected-image" src="images/trueStory/steamSq.png" alt="steam" onclick="selectImage(this)">
+          <div class="image-with-text-container" onclick="selectCard('steam')">
+            <img class="unselected-image" src="images/trueStory/steamSq.png" alt="steam">
             <div class="image-text-story" data-lang="storyTypeSteam">Máquina de vapor</div>
           </div>
   
-          <div class="image-with-text-container">
-            <img class="unselected-image" src="images/trueStory/columbusSq.png" alt="columbus" onclick="selectImage(this)">
+          <div class="image-with-text-container" onclick="selectCard('columbus')">
+            <img class="unselected-image" src="images/trueStory/columbusSq.png" alt="columbus">
             <div class="image-text-story" data-lang="storyTypeColumbus">Cristóbal Colón</div>
           </div>
           </div>
@@ -65,12 +65,10 @@
     </div> -->
 
     <div class="centered-bottom-button">
-      <a href="story.html">
-        <div class="center-content">
-          <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
-          <span class="custom-button-text" data-lang="generateButton">Create</span>
-        </div>
-      </a>
+      <div class="center-content"  onclick="getStory()">
+        <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
+        <span class="custom-button-text" data-lang="generateButton">Create</span>
+      </div>
     </div>
   </form>
 
@@ -92,14 +90,6 @@
       </div>
     </div>
 
-    <!-- <div class="navbar-element">
-      <div class="dropdown">
-        <div class="dropdown-toggle">
-          <img class="flag-image"src="images/menu/back.png" alt="back" onclick="goBack()">
-        </div>
-      </div>
-    </div> -->
-
     <div class="navbar-element">
       <div class="dropdown">
         <div class="dropdown-toggle">
@@ -120,18 +110,13 @@
       </div>
     </div>
 
-  </div>  
-<!--   
-  <div id="loading-overlay" class="overlay loading">
-    <p id="loading-text" data-lang="loadingLabel">Cargando...</p>
   </div>
-
-  <div id="story-overlay" class="overlay story" display="none">
-    <h1 id="title"></h1>
-    <span id="close-button" onclick="closeOverlay()">✕</span>
-    <p id="output"></p>
-  </div> -->
-
+  
+  <div id="loading-overlay" class="loading-overlay">
+    <p class="loading-text" id="loading-text" data-lang="loadingLabel">Cargando...</p>
+    <progress class="loading-text"></progress>
+  </div>
+  
   <script src="js/main.js"></script>
 </body>
 </html>

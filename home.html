@@ -13,18 +13,18 @@
   <h1 class="center-content">Page Name</h1>
 
   <div class="main-menu-container center-content">
-    <div class="card-margin image-with-text-container">
-      <img class="unselected-image" src="images/mainMenu/newStorySmall.png" alt="newStory" onclick="pageTransition('newStory.html', this)">
+    <div class="card-margin image-with-text-container" onclick="pageTransition('newStory.html', 'newStory')">
+      <img class="unselected-image" src="images/mainMenu/newStorySmall.png" alt="newStory">
       <div class="image-text-story" data-lang="newStoryOptionLabel">Nueva Historia</div>
     </div>
   
-    <div class="card-margin image-with-text-container">
-      <img class="unselected-image" src="images/mainMenu/trueStorySmall.png" alt="trueStory" onclick="pageTransition('trueStory.html', this)">
+    <div class="card-margin image-with-text-container" onclick="pageTransition('trueStory.html', 'trueStory')">
+      <img class="unselected-image" src="images/mainMenu/trueStorySmall.png" alt="trueStory">
       <div class="image-text-story" data-lang="trueStoryOptionLabel">Historia Real</div>
     </div>
 
-    <div class="card-margin image-with-text-container">
-      <img class="unselected-image" src="images/mainMenu/quickSmall.png" alt="quickStory" onclick="pageTransition('story.html', this)">
+    <div class="card-margin image-with-text-container" onclick="getStory()">
+      <img class="unselected-image" src="images/mainMenu/quickSmall.png" alt="quickStory">
       <div class="image-text-story" data-lang="quickStoryOptionLabel">Historia Rápida</div>
     </div>
   </div>
@@ -68,6 +68,11 @@
       </div>
     </div>
 
+  </div>
+
+  <div id="loading-overlay" class="loading-overlay">
+    <p class="loading-text" id="loading-text" data-lang="loadingLabel">Cargando...</p>
+    <progress class="loading-text"></progress>
   </div>
 
   <script src="js/main.js"></script>
