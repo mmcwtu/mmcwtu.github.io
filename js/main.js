@@ -165,7 +165,7 @@ function hideWelcomePage() {
   
     setTimeout(function() {
       overlay.classList.add("fade-out");
-    }, 1000);
+    }, 500);
   }
 }
 
@@ -236,10 +236,12 @@ function showDataOnPage() {
     <h1>${title}</h1>
     <p>${story}</p>
     <br>
+  `;
+
+  document.querySelector("[class*='moral']").innerHTML = `
     <div class="paragraphs" data-lang="moralLabel">Moraleja</div>
     <p>${moral}</p>
   `;
-
 }
 
 if (window.location.pathname === '/story.html') {
