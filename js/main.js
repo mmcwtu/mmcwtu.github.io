@@ -172,12 +172,11 @@ function clearFields() {
 // };
 // xhr.send();
 
-function selectImage(image) {
-  imageForSubmit = image.getAttribute("alt");
+function selectCard(image) {
   if (selectedImage) {
     selectedImage.classList.remove("selected-image");
   }
-  selectedImage = image;
+  selectedImage = document.querySelector(`img[alt="${image}"]`);
   selectedImage.classList.add("selected-image");
 }
 
