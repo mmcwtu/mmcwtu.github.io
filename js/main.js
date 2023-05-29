@@ -2,7 +2,7 @@ const form = document.querySelector('form');
 const storyOverlay = document.getElementById('story-overlay');
 const storyType = document.querySelector('#storyType');
 var selectedImage = null;
-var imageForSubmit = ""; 
+var submittedStoryType = ""; 
 const urlParams = new URLSearchParams(window.location.search);
 const pageParam = urlParams.get('prev');
 
@@ -26,7 +26,7 @@ async function getStory() {
   
   const data = { 
     characterName: characterName, 
-    storyType: imageForSubmit,
+    storyType: submittedStoryType,
     storyLanguage: myMap.get(localStorage.getItem("selectedLanguage"))
   };
 
@@ -71,6 +71,8 @@ function clearFields() {
 }
 
 function selectCard(image) {
+  submittedStoryType = image;
+
   if (selectedImage) {
     selectedImage.classList.remove("selected-image");
   }
@@ -222,7 +224,7 @@ function pageTransition(page, image) {
     window.location.href = page;
   }, 300);
 
-  selectImage(image)
+  selectCard(image)
 }
 
 function showDataOnPage() {

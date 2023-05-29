@@ -65,12 +65,10 @@
     </div> -->
 
     <div class="centered-bottom-button">
-      <a href="story.html">
-        <div class="center-content">
-          <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
-          <span class="custom-button-text" data-lang="generateButton">Create</span>
-        </div>
-      </a>
+      <div class="center-content"  onclick="getStory()">
+        <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
+        <span class="custom-button-text" data-lang="generateButton">Create</span>
+      </div>
     </div>
   </form>
 
@@ -113,7 +111,12 @@
     </div>
 
   </div>
-
+  
+  <div id="loading-overlay" class="loading-overlay">
+    <p class="loading-text" id="loading-text" data-lang="loadingLabel">Cargando...</p>
+    <progress class="loading-text"></progress>
+  </div>
+  
   <script src="js/main.js"></script>
 </body>
 </html>
