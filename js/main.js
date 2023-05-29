@@ -67,7 +67,7 @@ async function pepe() {
   const data = { 
     characterName: characterName, 
     storyType: imageForSubmit,
-    lang: "spanish"
+    storyLanguage: "spanish"
   };
 
   try {
