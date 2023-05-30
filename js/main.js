@@ -45,11 +45,9 @@ async function getStory() {
     const body = responseData.body
     const title = body.title;
     const story = body.story;
-    const moral = body.moral;
 
     localStorage.setItem("title", title);
     localStorage.setItem("story", story);
-    localStorage.setItem("moral", moral);
   } catch (error) {
     console.error(error);
   }
@@ -230,17 +228,11 @@ function pageTransition(page, image) {
 function showDataOnPage() {
   const title = localStorage.getItem('title');
   const story = localStorage.getItem('story');
-  const moral = localStorage.getItem('moral');
 
   document.getElementById('storyText').innerHTML = `
     <h1>${title}</h1>
     <p>${story}</p>
     <br>
-  `;
-
-  document.querySelector("[class*='moral']").innerHTML = `
-    <div class="paragraphs" data-lang="moralLabel">Moraleja</div>
-    <p>${moral}</p>
   `;
 }
 
