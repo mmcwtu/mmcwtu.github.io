@@ -14,7 +14,7 @@
     <div class="label-margin" data-lang="characterLabel">Nombre del personaje principal:</div>
 
     <div class="control">
-      <input class="text-field" type="text" id="name" placeholder="">
+      <input class="text-field" type="text" id="name" data-lang="randomNamePlaceholder" placeholder="Nombre aleatorio">
     </div>
       
     <div class="label-margin" data-lang="storyTypeLabel">Tipo de cuento:</div>
@@ -22,14 +22,15 @@
     <div class="center-content">
       <div class="cards-container">
         <div class="cards-scrollable">
+
           <div class="image-with-text-container" onclick="selectCard('fantasy')">
             <img class="unselected-image" src="images/storyTypes/fantasySq.png" alt="fantasy">
             <div class="image-text-story" data-lang="storyTypeLabelFantasy">Fantasía</div>
           </div>
   
-          <div class="image-with-text-container" onclick="selectCard('horror')">
-            <img class="unselected-image" src="images/storyTypes/horrorSq.png" alt="horror">
-            <div class="image-text-story" data-lang="storyTypeLabelHorror">Terror</div>
+          <div class="image-with-text-container" onclick="selectCard('halloween')">
+            <img class="unselected-image" src="images/storyTypes/halloweenSq.png" alt="halloween">
+            <div class="image-text-story" data-lang="storyTypeLabelHalloween">Halloween</div>
           </div>
   
           <div class="image-with-text-container" onclick="selectCard('scifi')">
@@ -37,26 +38,41 @@
             <div class="image-text-story" data-lang="storyTypeLabelSciFi">Ciencia ficción</div>
           </div>
 
-          <div class="image-with-text-container" onclick="selectCard('adventure')">
-            <img class="unselected-image" src="images/storyTypes/adventureSq.png" alt="adventure">
-            <div class="image-text-story" data-lang="storyTypeLabelRealistic">Aventura</div>
+          <div class="image-with-text-container" onclick="selectCard('adventures')">
+            <img class="unselected-image" src="images/storyTypes/adventuresSq.png" alt="adventures">
+            <div class="image-text-story" data-lang="storyTypeLabelAdventure">Aventuras</div>
           </div>
     
-          <div class="image-with-text-container" onclick="selectCard('mystery')">
-            <img class="unselected-image" src="images/storyTypes/mysterySq.png" alt="mystery">
-            <div class="image-text-story" data-lang="storyTypeLabelDetective">Misterio</div>
+          <div class="image-with-text-container" onclick="selectCard('detective')">
+            <img class="unselected-image" src="images/storyTypes/detectiveSq.png" alt="detective">
+            <div class="image-text-story" data-lang="storyTypeLabelDetective">Detectives</div>
           </div>
+
+          <div class="image-with-text-container" onclick="selectCard('animals')">
+            <img class="unselected-image" src="images/storyTypes/animalsSq.png" alt="animals">
+            <div class="image-text-story" data-lang="storyTypeLabelAnimals">Animales</div>
           </div>
+
+          <div class="image-with-text-container" onclick="selectCard('myths')">
+            <img class="unselected-image" src="images/storyTypes/mythsSq.png" alt="myths">
+            <div class="image-text-story" data-lang="storyTypeLabelMyths">Mitos y Leyendas</div>
+          </div>
+
+          <div class="image-with-text-container" onclick="selectCard('christmas')">
+            <img class="unselected-image" src="images/storyTypes/christmasSq.png" alt="christmas">
+            <div class="image-text-story" data-lang="storyTypeLabelChristmas">Navidad</div>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <div class="centered-bottom-button">
+    <!-- <div class="centered-bottom-button">
       <div class="center-content" onclick="getStory()">
         <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
         <span class="custom-button-text" data-lang="generateButton">Crear</span>
       </div>
-    </div>
+    </div> -->
   </form>
 
   <div class="navbar" id="myNavbar">

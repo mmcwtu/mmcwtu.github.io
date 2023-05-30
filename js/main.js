@@ -2,7 +2,8 @@ const form = document.querySelector('form');
 const storyOverlay = document.getElementById('story-overlay');
 const storyType = document.querySelector('#storyType');
 var selectedImage = null;
-var submittedStoryType = ""; 
+var submittedStoryType = "";
+var submittedStoryName = "";
 const urlParams = new URLSearchParams(window.location.search);
 const pageParam = urlParams.get('prev');
 
@@ -25,8 +26,9 @@ async function getStory() {
   const characterName = document.getElementById('name') == null? "" : document.getElementById('name').value;
   
   const data = { 
-    characterName: characterName, 
-    storyType: submittedStoryType,
+    characterName: characterName,
+    storyType: localStorage.getItem("storyType"),
+    storyName: submittedStoryName,
     storyLanguage: myMap.get(localStorage.getItem("selectedLanguage"))
   };
 
@@ -69,13 +71,15 @@ function clearFields() {
 }
 
 function selectCard(image) {
-  submittedStoryType = image;
+  submittedStoryName = image;
 
   if (selectedImage) {
     selectedImage.classList.remove("selected-image");
   }
   selectedImage = document.querySelector(`img[alt="${image}"]`);
   selectedImage.classList.add("selected-image");
+
+  getStory();
 }
 
 function selectDefaultFontSize() {
@@ -96,6 +100,7 @@ function translatePage(fromEventListener) {
           const translation = translations[selectedLanguage][key];
           if (translation) {
             element.textContent = translation;
+            element.setAttribute('placeholder', translation);
           }
         });
       })
@@ -218,11 +223,17 @@ function countCharacters() {
 }
 
 function pageTransition(page, image) {
+  localStorage.setItem("storyType", image);
+
+  if (selectedImage) {
+    selectedImage.classList.remove("selected-image");
+  }
+  selectedImage = document.querySelector(`img[alt="${image}"]`);
+  selectedImage.classList.add("selected-image");
+
   setTimeout(function() {
     window.location.href = page;
   }, 300);
-
-  selectCard(image)
 }
 
 function showDataOnPage() {
