@@ -29,7 +29,9 @@
       "email": "Email",
       "message": "Message",
       "send": "Send",
-      "maxCounter": "characters left"
+      "maxCounter": "characters left",
+      "imageBy": "Image by ",
+      "storiesCreated": "Stories created using"
     },
     "es": {
       "language": "Español",
@@ -61,7 +63,9 @@
       "email": "Email",
       "message": "Mensaje",
       "send": "Enviar",
-      "maxCounter": "caracteres restantes"
+      "maxCounter": "caracteres restantes",
+      "imageBy": "Imagen por ",
+      "storiesCreated": "Historias creadas usando "
     },
     "fr": {
       "language": "Français",
@@ -93,7 +97,9 @@
       "email": "Email",
       "message": "Message",
       "send": "Envoyer",
-      "maxCounter": "caractères restants"
+      "maxCounter": "caractères restants",
+      "imageBy": "Image par ",
+      "storiesCreated": "Histoires créées à l'aide de "
     },
     "pt": {
       "language": "Português",
@@ -125,7 +131,9 @@
       "email": "Email",
       "message": "Mensagem",
       "send": "Enviar",
-      "maxCounter": "caracteres restantes"
+      "maxCounter": "caracteres restantes",
+      "imageBy": "Imagem por ",
+      "storiesCreated": "Histórias criadas usando "
     },
     "de": {
       "language": "Deutsch",
@@ -157,7 +165,9 @@
       "email": "E-Mail",
       "message": "Nachricht",
       "send": "Senden",
-      "maxCounter": "Zeichen übrig"
+      "maxCounter": "Zeichen übrig",
+      "imageBy": "Bild von ",
+      "storiesCreated": "Geschichten erstellt mit "
     },
     "it": {
       "language": "Italiano",
@@ -189,7 +199,9 @@
       "email": "Email",
       "message": "Messaggio",
       "send": "Invia",
-      "maxCounter": "caratteri rimasti"
+      "maxCounter": "caratteri rimasti",
+      "imageBy": "Immagine di ",
+      "storiesCreated": "Storie create usando "
     }
 }
   
