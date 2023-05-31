@@ -112,6 +112,23 @@ a {
   margin-inline: 5px;
 }
 
+.unselected-menu-image {
+  border: 1px solid rgb(121, 121, 121);
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+  max-width: 75vw;
+  border-radius: 5vw;
+  margin-inline: 5px;
+}
+
+.selected-menu-image {
+  border: 2px solid rgb(30, 30, 30);
+  opacity: 1;
+  max-width: 75vw;
+  border-radius: 5vw;
+  margin-inline: 5px;
+}
+
 .image-text-story {
   position: absolute;
   top: 85%;

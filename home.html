@@ -10,24 +10,29 @@
 
   <form></form>
   
-
   <div class="main-menu-container center-content">
     <img class="welcome-image-home center-content" src="images/pageName.png" alt="start">
+
+    <div class="card-margin image-with-text-container" onclick="getStory()">
+      <img class="unselected-menu-image" src="images/mainMenu/quickStoryWide.png" alt="quick">
+      <div class="image-text-story" data-lang="quickStoryOptionLabel">Cuento Rápido</div>
+    </div>
     
     <div class="card-margin image-with-text-container" onclick="pageTransition('newStory.html', 'new')">
-      <img class="unselected-image" src="images/mainMenu/newStorySmall.png" alt="new">
-      <div class="image-text-story" data-lang="newStoryOptionLabel">Nueva Historia</div>
+      <img class="unselected-menu-image" src="images/mainMenu/newStoryWide.png" alt="new">
+      <div class="image-text-story" data-lang="newStoryOptionLabel">Nuevo Cuento</div>
     </div>
   
     <div class="card-margin image-with-text-container" onclick="pageTransition('trueStory.html', 'true')">
-      <img class="unselected-image" src="images/mainMenu/trueStorySmall.png" alt="true">
-      <div class="image-text-story" data-lang="trueStoryOptionLabel">Historia Real</div>
+      <img class="unselected-menu-image" src="images/mainMenu/trueStoryWide.png" alt="true">
+      <div class="image-text-story" data-lang="trueStoryOptionLabel">Cuento Real</div>
     </div>
 
-    <div class="card-margin image-with-text-container" onclick="getStory()">
-      <img class="unselected-image" src="images/mainMenu/quickSmall.png" alt="quickStory">
-      <div class="image-text-story" data-lang="quickStoryOptionLabel">Historia Rápida</div>
+    <div class="card-margin image-with-text-container" onclick="pageTransition('classicStory.html', 'classic')">
+      <img class="unselected-menu-image" src="images/mainMenu/classicStoryWide.png" alt="classic">
+      <div class="image-text-story" data-lang="classicStoryOptionLabel">Cuento Clásico</div>
     </div>
+
   </div>
   
 
