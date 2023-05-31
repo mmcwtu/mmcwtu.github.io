@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuentosPeques</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <form>
+
+    <h1 class="page-title" data-lang="trueStoryOptionLabel">Historia Real</h1>
+
+    <div class="center-content top-margin">
+      <div class="cards-container">
+        <div class="cards-scrollable">
+          
+          <div class="image-with-text-container" onclick="selectCard('red')">
+            <img class="unselected-image" src="images/classicStory/redSq.png" alt="red">
+            <div class="image-text-story" data-lang="storyTypeRed">Caperucita roja</div>
+          </div>
+
+          <div class="image-with-text-container" onclick="selectCard('king')">
+            <img class="unselected-image" src="images/classicStory/kingSq.png" alt="king">
+            <div class="image-text-story" data-lang="storyTypeKingArthur">Rey Arturo</div>
+          </div>
+          
+          <div class="image-with-text-container" onclick="selectCard('magic')">
+            <img class="unselected-image" src="images/classicStory/magicSq.png" alt="magic">
+            <div class="image-text-story" data-lang="storyTypeMagic">Aladin</div>
+          </div>
+
+          <div class="image-with-text-container" onclick="selectCard('pigs')">
+            <img class="unselected-image" src="images/classicStory/pigsSq.png" alt="pigs">
+            <div class="image-text-story" data-lang="storyTypePigs">Los tres cerditos</div>
+          </div>
+
+          <div class="image-with-text-container" onclick="selectCard('duckling')">
+            <img class="unselected-image" src="images/classicStory/ducklingSq.png" alt="duckling">
+            <div class="image-text-story" data-lang="storyTypeDuckling">El patito feo</div>
+          </div>
+
+          <div class="image-with-text-container" onclick="selectCard('siblings')">
+            <img class="unselected-image" src="images/classicStory/siblingsSq.png" alt="siblings">
+            <div class="image-text-story" data-lang="storyTypeSiblings">Hansel y Gretel</div>
+          </div>
+
+          <div class="image-with-text-container" onclick="selectCard('race')">
+            <img class="unselected-image" src="images/classicStory/raceSq.png" alt="race">
+            <div class="image-text-story" data-lang="storyTypeRace">La liebre y la tortuga</div>
+          </div>
+
+          <div class="image-with-text-container" onclick="selectCard('glass')">
+            <img class="unselected-image" src="images/classicStory/glassSq.png" alt="glass">
+            <div class="image-text-story" data-lang="storyTypeGlass">Cenicienta</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </form>
+
+  <div class="navbar" id="myNavbar">
+
+    <div class="navbar-element navbar-element-left">
+      <div class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown()">
+          <img class="flag-selected-image" src="images/flags/es.png" alt="es" id="selected-language">
+        </div>
+        <div class="dropdown-content font-size-content">
+          <img class="flag-image flag-image-border" src="images/flags/es.png" alt="es" onclick="selectLanguage(this, 'es')">
+          <img class="flag-image flag-image-border" src="images/flags/en.png" alt="en" onclick="selectLanguage(this, 'en')">
+          <!-- <img class="flag-image flag-image-border" src="images/flags/fr.png" alt="fr" onclick="selectLanguage(this, 'fr')">
+          <img class="flag-image flag-image-border" src="images/flags/pt.png" alt="pt" onclick="selectLanguage(this, 'pt')">
+          <img class="flag-image flag-image-border" src="images/flags/de.png" alt="de" onclick="selectLanguage(this, 'de')"> -->
+          <img class="flag-image flag-image-border"src="images/flags/it.png" alt="it" onclick="selectLanguage(this, 'it')">
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="home.html">
+            <img class="flag-image pepe"src="images/menu/home.png" alt="home">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-element navbar-element-right">
+      <div class="dropdown">
+        <div class="dropdown-toggle">
+          <a href="contact.html">
+            <img class="flag-image"src="images/menu/contact.png" alt="info">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <div id="loading-overlay" class="loading-overlay">
+    <p class="loading-text" id="loading-text" data-lang="loadingLabel">Cargando...</p>
+    <progress class="loading-text"></progress>
+  </div>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>
