@@ -35,7 +35,7 @@ async function getStory() {
   loadingOverlay.style.display = 'block';
 
   try {
-    const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/cuentos', {
+    const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/storyRetriever', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ async function getStory() {
     const responseData = await responseObj.json();
     const body = responseData.body
     const title = body.title;
-    const story = body.story;
+    const story = body.storyText;
 
     localStorage.setItem("title", title);
     localStorage.setItem("story", story);
