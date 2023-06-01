@@ -1,11 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .container {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
-#welcomeText {
-  opacity: 0;
-  animation: fade-out 0.5s linear;
+.content {
+  text-align: center;
+}
+
+.text {
+  margin-top: 10px;
 }
