@@ -479,7 +479,7 @@ textarea {
 .counter-container {
   display: flex;
   margin-inline: 5vw;
-  margin-top: -2vw;
+  margin-top: -2.5vw;
 }
 
 #counter {
@@ -599,4 +599,29 @@ textarea {
 @keyframes fade-out {
   0% { opacity: 1; }
   100% { opacity: 0; }
+}
+
+.label-contact {
+  margin-top: 1vh;
+  margin-bottom: -0.5vh;
+}
+
+.thanks-message {
+  margin-block: 1vh;
+  display: none;
+}
+
+.show-message {
+  margin-block: 1vh;
+  color: #2b9b40;
+  display: block;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }

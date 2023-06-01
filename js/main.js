@@ -231,10 +231,14 @@ function selectFontSize(image, size) {
 }
 
 function countCharacters() {
-  var textarea = document.getElementById("myTextarea");
+  checkTextArea()
+
+  var textarea = document.getElementById("contactMessage");
   var counter = document.getElementById("counter");
+  
   var maxLength = 500;
   var currentLength = textarea.value.length;
+
   counter.textContent = maxLength - currentLength;
 
   if (currentLength > maxLength) {
@@ -271,4 +275,61 @@ function showDataOnPage() {
 
 if (window.location.pathname === '/story.html') {
   window.onload = showDataOnPage();
+}
+
+async function submitContactForm() {
+  checkTextArea();
+
+  var contactMessage = document.getElementById("contactMessage");
+
+  if (contactMessage.value.trim() !== "") {
+    var contactName = document.getElementById("contactName");
+    var contactEmail = document.getElementById("contactEmail");
+    var thanksMessage = document.getElementById("thanksMessage");
+    var button = document.getElementById("sendButton");
+    var buttonText = document.getElementById("sendButtonText");
+  
+    button.classList.add("button-disabled");
+    buttonText.classList.add("button-disabled");
+  
+    const data = { 
+      email: contactEmail,
+      name: contactName,
+      message: contactMessage
+    };
+  
+    try {
+      const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  
+    contactName.value = "";
+    contactEmail.value = "";
+    contactMessage.value = "";
+  
+    thanksMessage.classList.add("show-message");
+  }
+}
+
+function checkTextArea() {
+  var contactMessage = document.getElementById("contactMessage");
+  var button = document.getElementById("sendButton");
+  var buttonText = document.getElementById("sendButtonText");
+
+  if (contactMessage.value.trim() === "") {
+    contactMessage.classList.add("error");
+    button.classList.add("button-disabled")
+    buttonText.classList.add("button-disabled")
+  } else {
+    contactMessage.classList.remove("error");
+    button.classList.remove("button-disabled")
+    buttonText.classList.remove("button-disabled")
+  }
 }

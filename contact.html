@@ -11,27 +11,29 @@
 
     <h1 data-lang="contactUs">Contáctanos</h1>
 
-    <div data-lang="name">Nombre:</div>
+    <div class="label-contact" data-lang="name">Nombre:</div>
     <div class="control">
-      <input class="contact-text-field" type="text" id="name" placeholder="">
+      <input class="contact-text-field" type="text" id="contactName" placeholder="">
     </div>
 
-    <div data-lang="email">Email:</div>
+    <div class="label-contact" data-lang="email">Email:</div>
     <div class="control">
-      <input class="contact-text-field" type="text" id="email" placeholder="">
+      <input class="contact-text-field" type="text" id="contactEmail" placeholder="">
     </div>
       
-    <div data-lang="message">Mensaje:</div>
-    <textarea id="myTextarea" rows="7" cols="50" maxlength="500" oninput="countCharacters()"></textarea>
+    <div class="label-contact" data-lang="message">Mensaje:</div>
+    <textarea id="contactMessage" rows="6" cols="50" maxlength="500" oninput="countCharacters()" required></textarea>
     <div class="counter-container">
       <div class="left-counter" id="counter">500</div>
       <div class="right-counter" data-lang="maxCounter"> caracteres por escribir</div>
     </div>
+
+    <div class="thanks-message" data-lang="thanksMessage" id="thanksMessage">¡Gracias por contactarnos!</div>
     
     <div class="centered-bottom-button contact-button">
-        <div class="center-content">
-          <img class="custom-button-image" src="images/create.png" alt="start" type="submit">
-          <span class="custom-button-text" data-lang="send">Enviar</span>
+        <div class="center-content" onclick="submitContactForm()">
+          <img class="custom-button-image button-disabled" src="images/create.png" alt="start" type="submit" id="sendButton">
+          <span class="custom-button-text button-disabled" id="sendButtonText" data-lang="send">Enviar</span>
         </div>
     </div>
 

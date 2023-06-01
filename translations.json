@@ -12,20 +12,20 @@
       "storyTypeLabelRomantic": "Romantic",
       "storyTypeLabelDetectives": "Detectives",
       "storyTypeLabelAnimals": "Animals",
-      "storyTypeLabelMyths": "Myths and Legends",
+      "storyTypeLabelMyths": "Myths and legends",
       "storyTypeLabelChristmas": "Christmas",
-      "storyTypePlane": "Wright Brother",
+      "storyTypePlane": "Wright Brothers",
       "storyTypeApolo": "Apolo 11",
       "storyTypeSteam": "Steam machine",
       "storyTypeColumbus": "Columbus",
       "storyTypePyramids": "Pyramids of Egypt",
       "storyTypeKingArthur": "King Arthur",
-      "storyTypeRed": "Little Red Riding Hood",
+      "storyTypeRed": "Little red riding hood",
       "storyTypeMagic": "Aladdin",
-      "storyTypePigs": "Three Little Pigs",
-      "storyTypeDuckling": "The Ugly Duckling",
+      "storyTypePigs": "Three little pigs",
+      "storyTypeDuckling": "The ugly duckling",
       "storyTypeSiblings": "Hansel and Gretel",
-      "storyTypeRace": "The Tortoise and the Hare",
+      "storyTypeRace": "The tortoise and the hare",
       "storyTypeGlass": "Cinderella",
       "moralLabel": "Moral",
       "generateButton": "Create",
@@ -44,7 +44,8 @@
       "maxCounter": "characters left",
       "imageBy": "Image by ",
       "storiesCreated": "Stories created using",
-      "randomNamePlaceholder": "Random name"
+      "randomNamePlaceholder": "Random name",
+      "thanksMessage": "Thank you for contacting us!"
     },
     "es": {
       "language": "Español",
@@ -59,7 +60,7 @@
       "storyTypeLabelRomantic": "Romántico",
       "storyTypeLabelDetectives": "Detectives",
       "storyTypeLabelAnimals": "Animales",
-      "storyTypeLabelMyths": "Mitos y Leyendas",
+      "storyTypeLabelMyths": "Mitos y leyendas",
       "storyTypeLabelChristmas": "Navidad",
       "storyTypePlane": "Hermanos Wright",
       "storyTypeApolo": "Apolo 11",
@@ -67,7 +68,7 @@
       "storyTypeColumbus": "Cristóbal Colón",
       "storyTypePyramids": "Pirámides de Egipto",
       "storyTypeKingArthur": "Rey Arturo",
-      "storyTypeRed": "Caperucita Roja",
+      "storyTypeRed": "Caperucita roja",
       "storyTypeMagic": "Aladin",
       "storyTypePigs": "Los tres cerditos",
       "storyTypeDuckling": "El patito feo",
@@ -91,7 +92,8 @@
       "maxCounter": "caracteres restantes",
       "imageBy": "Imagen por ",
       "storiesCreated": "Cuentos creados usando ",
-      "randomNamePlaceholder": "Nombre aleatorio"
+      "randomNamePlaceholder": "Nombre aleatorio",
+      "thanksMessage": "¡Gracias por contactarnos!"
     },
     "fr": {
       "language": "Français",
@@ -138,7 +140,8 @@
       "maxCounter": "caractères restants",
       "imageBy": "Image par ",
       "storiesCreated": "Histoires créées à l'aide de ",
-      "randomNamePlaceholder": "Nom aléatoire"
+      "randomNamePlaceholder": "Nom aléatoire",
+      "thanksMessage": "Merci de nous avoir contactés !"
     },
     "pt": {
       "language": "Português",
@@ -185,7 +188,8 @@
       "maxCounter": "caracteres restantes",
       "imageBy": "Imagem por ",
       "storiesCreated": "Histórias criadas usando ",
-      "randomNamePlaceholder": "Nome aleatório"
+      "randomNamePlaceholder": "Nome aleatório",
+      "thanksMessage": "Obrigado por entrar em contato conosco!"
     },
     "de": {
       "language": "Deutsch",
@@ -232,7 +236,8 @@
       "maxCounter": "Zeichen übrig",
       "imageBy": "Bild von ",
       "storiesCreated": "Geschichten erstellt mit ",
-      "randomNamePlaceholder": "Zufälliger Name"
+      "randomNamePlaceholder": "Zufälliger Name",
+      "thanksMessage": "Vielen Dank, dass Sie uns kontaktiert haben!"
     },
     "it": {
       "language": "Italiano",
@@ -247,7 +252,7 @@
       "storyTypeLabelRomantic": "Romantica",
       "storyTypeLabelDetectives": "Detective",
       "storyTypeLabelAnimals": "Animali",
-      "storyTypeLabelMyths": "Miti e Leggende",
+      "storyTypeLabelMyths": "Miti e leggende",
       "storyTypeLabelChristmas": "Natale",
       "storyTypePlane": "Fratelli Wright",
       "storyTypeApolo": "Apollo 11",
@@ -255,7 +260,7 @@
       "storyTypeColumbus": "Colombo",
       "storyTypePyramids": "Piramidi d'Egitto",
       "storyTypeKingArthur": "Re Artù",
-      "storyTypeRed": "Cappuccetto Rosso",
+      "storyTypeRed": "Cappuccetto rosso",
       "storyTypeMagic": "Aladino",
       "storyTypePigs": "I tre porcellini",
       "storyTypeDuckling": "Il brutto anatroccolo",
@@ -279,6 +284,7 @@
       "maxCounter": "caratteri rimasti",
       "imageBy": "Immagine di ",
       "storiesCreated": "Storie create usando ",
-      "randomNamePlaceholder": "Nome casuale"
+      "randomNamePlaceholder": "Nome casuale",
+      "thanksMessage": "Grazie per averci contattato!"
     }
 }
