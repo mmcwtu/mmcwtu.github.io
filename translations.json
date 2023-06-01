@@ -45,7 +45,8 @@
       "imageBy": "Image by ",
       "storiesCreated": "Stories created using",
       "randomNamePlaceholder": "Random name",
-      "thanksMessage": "Thank you for contacting us!"
+      "thanksMessage": "Thank you for contacting us!",
+      "welcomeMessage": "A new tale with every click"
     },
     "es": {
       "language": "Español",
@@ -93,7 +94,8 @@
       "imageBy": "Imagen por ",
       "storiesCreated": "Cuentos creados usando ",
       "randomNamePlaceholder": "Nombre aleatorio",
-      "thanksMessage": "¡Gracias por contactarnos!"
+      "thanksMessage": "¡Gracias por contactarnos!",
+      "welcomeMessage": "Una nueva historia en cada click"
     },
     "fr": {
       "language": "Français",
@@ -141,7 +143,8 @@
       "imageBy": "Image par ",
       "storiesCreated": "Histoires créées à l'aide de ",
       "randomNamePlaceholder": "Nom aléatoire",
-      "thanksMessage": "Merci de nous avoir contactés !"
+      "thanksMessage": "Merci de nous avoir contactés !",
+      "welcomeMessage": "Un nouveau conte à chaque clic"
     },
     "pt": {
       "language": "Português",
@@ -189,7 +192,8 @@
       "imageBy": "Imagem por ",
       "storiesCreated": "Histórias criadas usando ",
       "randomNamePlaceholder": "Nome aleatório",
-      "thanksMessage": "Obrigado por entrar em contato conosco!"
+      "thanksMessage": "Obrigado por entrar em contato conosco!",
+      "welcomeMessage": "Um novo conto a cada clique"
     },
     "de": {
       "language": "Deutsch",
@@ -237,7 +241,8 @@
       "imageBy": "Bild von ",
       "storiesCreated": "Geschichten erstellt mit ",
       "randomNamePlaceholder": "Zufälliger Name",
-      "thanksMessage": "Vielen Dank, dass Sie uns kontaktiert haben!"
+      "thanksMessage": "Vielen Dank, dass Sie uns kontaktiert haben!",
+      "welcomeMessage": "Ein neues Märchen bei jedem Klick"
     },
     "it": {
       "language": "Italiano",
@@ -285,6 +290,7 @@
       "imageBy": "Immagine di ",
       "storiesCreated": "Storie create usando ",
       "randomNamePlaceholder": "Nome casuale",
-      "thanksMessage": "Grazie per averci contattato!"
+      "thanksMessage": "Grazie per averci contattato!",
+      "welcomeMessage": "Una nuova storia ad ogni clic"
     }
 }

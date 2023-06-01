@@ -562,7 +562,7 @@ textarea {
   width: 100%;
   height: 100%;
   background-color: rgb(238, 238, 238);
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   opacity: 1;
@@ -624,4 +624,40 @@ textarea {
 .button-disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.welcome-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-content {
+  text-align: center;
+}
+
+.welcome-text {
+  margin-top: 10px;
+}
+
+.welcome-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 55%;
+  padding: 10px;
+}
+
+.welcome-navbar-container {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-navbar-text {
+  margin-right: 2vw;
+}
+
+.welcome-message {
+  margin-top: 1vh;
+  font-size: 1.2rem;
 }
