@@ -47,7 +47,7 @@ async function getStory() {
   loadingOverlay.style.display = 'block';
 
   try {
-    const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/cuentos', {
+    const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/storyRetriever', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -67,7 +67,7 @@ async function getStory() {
       story = apologiesStory.get(language)
     } else {
       title = body.title;
-      story = body.story;
+      story = body.storyText;
     }
 
     localStorage.setItem("title", title);
@@ -146,7 +146,6 @@ function translatePage(fromEventListener) {
 
 function changeFontSize(fromEventListener) {
   const selectedFontSize = localStorage.getItem('fontSize') == null ? "fontM" : localStorage.getItem('fontSize');
-  console.info(selectedFontSize)
   var textArea = document.getElementById("storyText");
 
   if (textArea != null) {
@@ -197,7 +196,6 @@ function hideWelcomePage() {
 function toggleDropdown() {
   var dropdownContent = document.querySelector("[class*='dropdown-content']");
   var isDisplayed = window.getComputedStyle(dropdownContent).getPropertyValue("display") === "block" ? true : false;
-  console.info(window.getComputedStyle(dropdownContent).getPropertyValue("display"));
 
   if (isDisplayed) {
     dropdownContent.classList.remove('show');
@@ -257,9 +255,13 @@ function pageTransition(page, image) {
   selectedImage = document.querySelector(`img[alt="${image}"]`);
   selectedImage.classList.add("selected-menu-image");
 
-  setTimeout(function() {
-    window.location.href = page;
-  }, 300);
+  if (image === "quick") {
+    getStory();
+  } else {
+    setTimeout(function() {
+      window.location.href = page;
+    }, 300);
+  }
 }
 
 function showDataOnPage() {
@@ -299,7 +301,7 @@ async function submitContactForm() {
     };
   
     try {
-      const responseObj = await fetch('https://n9qwpmmfd9.execute-api.sa-east-1.amazonaws.com/default/contact', {
+      const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
