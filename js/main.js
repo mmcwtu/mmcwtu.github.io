@@ -61,7 +61,7 @@ async function getStory() {
     var title = "";
     var story = "";
 
-    if (body == null) {
+    if (body == null || body == "") {
       const language = localStorage.getItem("selectedLanguage");
       title = apologiesTitle.get(language)
       story = apologiesStory.get(language)
