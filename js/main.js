@@ -295,9 +295,9 @@ async function submitContactForm() {
     buttonText.classList.add("button-disabled");
   
     const data = { 
-      email: contactEmail,
-      name: contactName,
-      message: contactMessage
+      email: contactEmail.value,
+      name: contactName.value,
+      message: contactMessage.value
     };
   
     try {
