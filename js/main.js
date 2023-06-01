@@ -78,7 +78,7 @@ async function getStory() {
 
   loadingOverlay.style.display = 'none';
 
-  window.location.href = "story.html";
+  // window.location.href = "story.html";
 }
 
 function closeOverlay() {
@@ -317,6 +317,19 @@ async function submitContactForm() {
     contactMessage.value = "";
   
     thanksMessage.classList.add("show-message");
+  }
+}
+
+async function pepe() {
+  try {
+    const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/contact', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  } catch (error) {
+    console.error(error);
   }
 }
 
