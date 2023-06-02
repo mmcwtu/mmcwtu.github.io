@@ -152,8 +152,7 @@ a {
   height: 100%;
   justify-content: center;
   align-items: center;
-  top: 6vh;
-  margin-bottom: 20vh;
+  margin-block: 100px;
 }
 
 .image-with-text-container {
@@ -627,4 +626,24 @@ textarea {
 .welcome-message {
   margin-top: 1vh;
   font-size: 1.2rem;
+}
+
+@media only screen and (max-device-width: 414px) {
+  #pepe {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-block: 20vh;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #pepe {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-block: 100px;
+  }
 }

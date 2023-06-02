@@ -1,19 +1,19 @@
-html, body {
-  height: 100%;
-  margin: 0;
+.myDiv {
+  background-color: #ccc;
 }
 
-.container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* iPhone Styles */
+@media only screen and (max-device-width: 414px) {
+  .myDiv {
+    width: 200px;
+    height: 200px;
+  }
 }
 
-.content {
-  text-align: center;
-}
-
-.text {
-  margin-top: 10px;
+/* iPad Styles */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .myDiv {
+    width: 400px;
+    height: 900px;
+  }
 }
