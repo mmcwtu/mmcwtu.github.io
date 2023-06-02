@@ -57,9 +57,9 @@ a {
 
 .scrollable-container {
   width: 90%;
-  height: 40vh;
-  overflow-x: scroll;
-  /* flex-direction: row; */
+  height: 35vh;
+  overflow-y: auto;
+  flex-direction: column;
   margin-block: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5%;
@@ -100,7 +100,7 @@ a {
   border: 1px solid rgb(121, 121, 121);
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
-  max-width: 80vw;
+  max-width: 100%;
   border-radius: 5vw;
   margin-inline: 5px;
 }
@@ -108,7 +108,7 @@ a {
 .selected-image {
   border: 2px solid rgb(30, 30, 30);
   opacity: 1;
-  max-width: 80vw;
+  max-width: 100%;
   border-radius: 5vw;
   margin-inline: 5px;
 }
@@ -494,12 +494,12 @@ textarea {
 }
 
 .cards-container {
-  width: 90%;
+  height: 75%;
   overflow-x: scroll;
 }
 
 .cards-scrollable {
-  display: flex;
+  display:inline-block;
   padding-block: 1vh;
 }
 
