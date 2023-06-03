@@ -57,19 +57,8 @@ a {
 
 .scrollable-container {
   width: 90%;
-  height: 35vh;
   overflow-y: auto;
   flex-direction: column;
-  margin-block: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 5%;
-}
-
-.scrollable-container-big {
-  width: 90%;
-  height: 50vh;
-  overflow-y: auto;
-  flex-direction: row;
   margin-block: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5%;
@@ -102,7 +91,7 @@ a {
   transition: opacity 0.3s ease-in-out;
   max-width: 100%;
   border-radius: 5vw;
-  margin-inline: 5px;
+  margin-block: 5px;
 }
 
 .selected-image {
@@ -159,6 +148,7 @@ a {
 .image-with-text-container {
   position: relative;
   display: flex;
+  justify-content: center;
 }
 
 .card-margin {
@@ -411,14 +401,6 @@ a {
   display: none;
 }
 
-.menu-image {
-  border: 2px solid lightblue;
-  opacity: 1;
-  width: 100%;
-  border-radius: 10vw;
-  margin-block: 5px;
-}
-
 .contact-text-field {
   padding: 10px;
   border-radius: 20px;
@@ -509,7 +491,9 @@ textarea {
 }
 
 .page-title {
-  margin-block: 5vh;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  font-size: 3.5vh
 }
 
 .top-margin {
@@ -534,7 +518,7 @@ textarea {
   z-index: 9999;
 }
 
-.overlay-hide {
+.hide-element {
   display: none;
 }
 
@@ -549,7 +533,6 @@ textarea {
 .welcome-image {
   max-width: 100%;
   max-height: 100%;
-  /* margin-inline: 3vw; */
 }
 
 .welcome-image-home {
@@ -626,5 +609,45 @@ textarea {
 
 .welcome-message {
   margin-top: 1vh;
-  font-size: 1.2rem;
+  font-size: 2.5vh;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* For iPhones (portrait and landscape) */
+@media only screen 
+  and (max-device-width: 812px)
+  and (-webkit-device-pixel-ratio: 3) {
+  .menu-image {
+    height: auto;
+  }
+
+  .scrollable-container-small {
+    height: 50vh;
+  }
+  
+  .scrollable-container-big {
+    height: 68vh;
+  }
+}
+
+/* For iPads (portrait and landscape) */
+@media only screen 
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) 
+  and (-webkit-device-pixel-ratio: 2) {
+  .menu-image {
+    height: 15vh;
+  }
+
+  .scrollable-container-small {
+    height: 60vh;
+  }
+  
+  .scrollable-container-big {
+    height: 75vh;
+  }
 }
