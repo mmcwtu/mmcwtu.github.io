@@ -55,19 +55,6 @@ a {
     cursor: pointer;
   }
 
-.scrollable-container {
-  width: 90%;
-  overflow-y: auto;
-  flex-direction: column;
-  margin-block: 10px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 5%;
-}
-
-.scrollable-container img {
-  width: 95%;
-}
-
 .fixed-container {
   position: fixed;
   top: 0;
@@ -631,6 +618,19 @@ textarea {
     height: 10vh;
     margin-block: 1.5vh;
   }
+
+  .scrollable-container {
+    width: 90%;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-block: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5%;
+  }
+  
+  .scrollable-container img {
+    width: 95%;
+  }
 }
 
 /* For iPhones 14 */
@@ -652,6 +652,19 @@ textarea {
     max-width: 100%;
     height: 10vh;
     margin-block: 1.5vh;
+  }
+
+  .scrollable-container {
+    width: 90%;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-block: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5%;
+  }
+  
+  .scrollable-container img {
+    width: 95%;
   }
 }
 
@@ -680,5 +693,18 @@ textarea {
     height: 10vh;
     margin-block: 1.5vh;
     margin-top: 5vh;
+  }
+
+  .scrollable-container {
+    width: 70%;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-block: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5%;
+  }
+  
+  .scrollable-container img {
+    width: 95%;
   }
 }
