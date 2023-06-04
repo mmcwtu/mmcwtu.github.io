@@ -654,7 +654,7 @@ textarea {
   and (min-device-width: 768px)
   and (max-device-width: 1024px) {
   .menu-image {
-    height: 15vh;
+    height: 17vh;
   }
 
   .scrollable-container-small {
@@ -663,5 +663,9 @@ textarea {
   
   .scrollable-container-big {
     height: 75vh;
+  }
+
+  .contact-message {
+    height: 30vh;
   }
 }
