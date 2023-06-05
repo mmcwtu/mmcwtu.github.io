@@ -152,15 +152,6 @@ a {
   color: #ffffff;
 }
 
-.navigation-back {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 10vw;
-  padding: 5px;
-  z-index: 9999;
-}
-
 .custom-button-container {
   position: absolute;
   top: 50%;
@@ -503,6 +494,38 @@ textarea {
   align-items: center;
   opacity: 1;
   z-index: 9999;
+}
+
+.disclaimer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(82, 82, 82, 0.8);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  /* z-index: 999; */
+}
+
+.disclaimer-container {
+  margin-top: 25%;
+}
+
+.disclaimer-title {
+  color: #FFFFFF;
+  font-family: "Nunito";
+}
+
+.disclaimer-content {
+  color: #FFFFFF;
+  margin: 5vh;
+  font-family: "Nunito";
+}
+
+.disclaimer-button {
+  top: 90%
 }
 
 .hide-element {
