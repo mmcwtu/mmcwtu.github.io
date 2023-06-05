@@ -26,6 +26,7 @@ const myMap = new Map([
 ]);
 
 document.addEventListener('DOMContentLoaded', function() {
+  console.info("Apologies for the 'Code-tastrophe' – our web page might have a few unexpected surprises! In the name of CuentosGPT, we really sorry!")
   translatePage(true);
 
   changeFontSize(true);
@@ -309,6 +310,12 @@ async function submitContactForm() {
       message: contactMessage.value
     };
   
+    contactName.value = "";
+    contactEmail.value = "";
+    contactMessage.value = "";
+  
+    thanksMessage.classList.add("show-message");
+
     try {
       const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/contact', {
         method: 'POST',
@@ -320,12 +327,6 @@ async function submitContactForm() {
     } catch (error) {
       console.error(error);
     }
-  
-    contactName.value = "";
-    contactEmail.value = "";
-    contactMessage.value = "";
-  
-    thanksMessage.classList.add("show-message");
   }
 }
 
