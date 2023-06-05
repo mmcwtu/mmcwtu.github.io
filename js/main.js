@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
   changeFontSize(true);
 
   hideWelcomePage();
+
+  closeDisclaimerOverlay(false);
 });
 
 async function getStory() {
@@ -79,17 +81,6 @@ async function getStory() {
   loadingOverlay.style.display = 'none';
 
   window.location.href = "story.html";
-}
-
-function closeOverlay() {
-    var overlay = document.getElementById('story-overlay');
-    overlay.style.display = 'none';
-    clearFields();
-}
-
-function clearFields() {
-    characterName.value = '';
-    moral.checked = false;
 }
 
 function selectCard(image) {
@@ -194,7 +185,15 @@ function hideWelcomePage() {
 }
 
 function toggleDropdown() {
-  var dropdownContent = document.querySelector("[class*='dropdown-content']");
+  genericToggleDropdown(false);
+}
+
+function toggleDropdown(fromDisclaimer) {
+  genericToggleDropdown(fromDisclaimer);
+}
+
+function genericToggleDropdown(fromDisclaimer) {
+  var dropdownContent = fromDisclaimer == true ? document.getElementById("disclaimerLangSelector") : document.querySelector("[class*='dropdown-content']");
   var isDisplayed = window.getComputedStyle(dropdownContent).getPropertyValue("display") === "block" ? true : false;
 
   if (isDisplayed) {
@@ -205,14 +204,24 @@ function toggleDropdown() {
 }
 
 function selectLanguage(image, lang) {
+  genericSelectLanguage(image, lang, false);
+}
+
+function selectLanguage(image, lang, fromDisclaimer) {
+  genericSelectLanguage(image, lang, fromDisclaimer);
+}
+
+function genericSelectLanguage(image, lang, fromDisclaimer) {
+  var toggleButton = fromDisclaimer == true ? document.getElementById("disclaimerDropdownToggle") : document.querySelector('.dropdown-toggle');
+  var dropdownContent = fromDisclaimer == true ? document.getElementById("disclaimerLangSelector") : document.getElementById("langSelector");
+
   var selectedImage = image.cloneNode(true);
-  var toggleButton = document.querySelector('.dropdown-toggle');
+  
   selectedImage.classList.remove('flag-image-border');
   toggleButton.innerHTML = selectedImage.outerHTML;
   localStorage.setItem('selectedLanguage', lang);
   translatePage(false);
   
-  var dropdownContent = document.querySelector("[class*='dropdown-content']");
   dropdownContent.classList.remove('show');
 }
 
@@ -333,5 +342,20 @@ function checkTextArea() {
     contactMessage.classList.remove("error");
     button.classList.remove("button-disabled")
     buttonText.classList.remove("button-disabled")
+  }
+}
+
+function closeDisclaimerOverlay(fromButton) {
+  if (fromButton) {
+    localStorage.setItem("disclaimerAccepted", "yes");
+    closeDisclaimerOverlay(false);
+  } else {
+    if (localStorage.getItem("disclaimerAccepted") == "yes") {
+      var disclaimerOverlay = document.getElementById("disclaimer-overlay");
+  
+      if (disclaimerOverlay != null) {
+        disclaimerOverlay.classList.add("hide-element");
+      }
+    }
   }
 }
