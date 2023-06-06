@@ -39,18 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function getStory() {
   const loadingOverlay = document.getElementById('loading-overlay');
-  const characterName = document.getElementById('name') == null? "" : document.getElementById('name').value;
+  const characterName = document.getElementById('name') == null ? "" : document.getElementById('name').value;
+  const language = localStorage.getItem("selectedLanguage") ?? "es";
   
   const data = { 
     characterName: characterName,
     storyType: localStorage.getItem("storyType"),
     storyName: submittedStoryName,
-    storyLanguage: myMap.get(localStorage.getItem("selectedLanguage"))
+    storyLanguage: myMap.get(language)
   };
 
   loadingOverlay.style.display = 'block';
 
-  const language = localStorage.getItem("selectedLanguage");
   var title = apologiesTitle.get(language);
   var story = apologiesStory.get(language);
 
@@ -66,7 +66,7 @@ async function getStory() {
     const responseData = await responseObj.json();
     const body = responseData.body
     
-    if (body != null && body != "") {
+    if (body != null && body != "" && typeof body !== 'undefined') {
       title = body.title;
       story = body.storyText;
     }
@@ -136,7 +136,7 @@ function translatePage(fromEventListener) {
 }
 
 function changeFontSize(fromEventListener) {
-  const selectedFontSize = localStorage.getItem('fontSize') == null ? "fontM" : localStorage.getItem('fontSize');
+  const selectedFontSize = localStorage.getItem('fontSize') ?? "fontM";
   var textArea = document.getElementById("storyText");
 
   if (textArea != null) {
@@ -180,7 +180,7 @@ function hideWelcomePage() {
   
     setTimeout(function() {
       overlay.classList.add("fade-out");
-    }, 500);
+    }, 800);
   }
 }
 
