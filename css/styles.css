@@ -182,6 +182,11 @@ a {
   align-items: center;
 }
 
+.center-content-row {
+  display: flex;
+  justify-content: center;
+}
+
 .lang-scrollable-container {
   position: absolute;
   top: 50%;
@@ -653,6 +658,11 @@ textarea {
 
 .scrollable-container img {
   width: 95%;
+}
+
+.share-message {
+  text-align: center;
+  margin-block: 2vh;
 }
 
 /* For iPhones X to 12 */

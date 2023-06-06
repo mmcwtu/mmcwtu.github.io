@@ -49,7 +49,8 @@
       "welcomeMessage": "A new tale with every click",
       "disclaimerTitle": "Disclaimer",
       "disclaimerContent": "Our tales at CuentosGPT are generated using ChatGPT, an AI language model by OpenAI. While we strive for high quality, we cannot guarantee that all content is suitable for kids. We advise parents or guardians to review the tales to ensure appropriateness for children. We are working to improve our filtering system, but please supervise children's online activities. By accessing our website, you understand and accept this disclaimer. Contact us with any concerns.",
-      "accept": "Accept"
+      "accept": "Accept",
+      "shareMessage": "Help us by sharing CuentosGPT!"
     },
     "es": {
       "language": "Español",
@@ -101,7 +102,8 @@
       "welcomeMessage": "Una nueva historia en cada click",
       "disclaimerTitle": "Descargo de responsabilidad",
       "disclaimerContent": "En CuentosGPT, nos esforzamos por brindar cuentos cautivadores y de alta calidad. Sin embargo, no podemos garantizar que todo el contenido sea adecuado para niños. Recomendamos a los padres o tutores revisar los cuentos para asegurarse de su adecuación para menores. Estamos trabajando para mejorar nuestro sistema de filtrado, pero por favor, supervisen las actividades en línea de los más pequeños. Al acceder a nuestro sitio web, comprende y acepta este descargo de responsabilidad. Póngase en contacto con nosotros si tiene alguna inquietud.",
-      "accept": "Aceptar"
+      "accept": "Aceptar",
+      "shareMessage": "¡Ayúdanos compartiendo CuentosGPT!"
     },
     "fr": {
       "language": "Français",
@@ -153,7 +155,8 @@
       "welcomeMessage": "Un nouveau conte à chaque clic",
       "disclaimerTitle": "Avertissement",
       "disclaimerContent": "Chez CuentosGPT, nous nous efforçons de fournir des contes captivants et de haute qualité. Cependant, nous ne pouvons garantir que tout le contenu soit approprié pour les enfants. Nous recommandons aux parents ou tuteurs de vérifier les contes afin de s'assurer de leur adéquation pour les enfants. Nous travaillons à améliorer notre système de filtrage, mais veuillez surveiller les activités en ligne des enfants. En accédant à notre site web, vous comprenez et acceptez cet avertissement. Contactez-nous si vous avez des préoccupations.",
-      "accept": "Accepter"
+      "accept": "Accepter",
+      "shareMessage": "Aidez-nous en partageant CuentosGPT!"
     },
     "pt": {
       "language": "Português",
@@ -205,7 +208,8 @@
       "welcomeMessage": "Um novo conto a cada clique",
       "disclaimerTitle": "Aviso Legal:",
       "disclaimerContent": "No CuentosGPT, nos esforçamos para fornecer contos cativantes e de alta qualidade. No entanto, não podemos garantir que todo o conteúdo seja adequado para crianças. Recomendamos que os pais ou responsáveis revisem os contos para garantir a sua adequação às crianças. Estamos trabalhando para melhorar nosso sistema de filtragem, mas pedimos que supervisionem as atividades online das crianças. Ao acessar nosso site, você compreende e aceita este aviso legal. Entre em contato conosco se tiver alguma preocupação.",
-      "accept": "Aceitar"
+      "accept": "Aceitar",
+      "shareMessage": "Ajude-nos compartilhando CuentosGPT!"
     },
     "de": {
       "language": "Deutsch",
@@ -257,7 +261,8 @@
       "welcomeMessage": "Ein neues Märchen bei jedem Klick",
       "disclaimerTitle": "Haftungsausschluss",
       "disclaimerContent": "Bei CuentosGPT bemühen wir uns, fesselnde und qualitativ hochwertige Geschichten anzubieten. Wir können jedoch nicht garantieren, dass alle Inhalte für Kinder geeignet sind. Wir empfehlen Eltern oder Erziehungsberechtigten, die Geschichten zu überprüfen, um deren Eignung für Kinder sicherzustellen. Wir arbeiten daran, unser Filtersystem zu verbessern, aber bitte überwachen Sie die Online-Aktivitäten von Kindern. Durch den Zugriff auf unsere Website erkennen Sie diesen Haftungsausschluss an und akzeptieren ihn. Bei Fragen oder Bedenken kontaktieren Sie uns bitte.",
-      "accept": "Akzeptieren"
+      "accept": "Akzeptieren",
+      "shareMessage": "Hilf uns, CuentosGPT zu teilen!"
     },
     "it": {
       "language": "Italiano",
@@ -309,6 +314,7 @@
       "welcomeMessage": "Una nuova storia ad ogni clic",
       "disclaimerTitle": "Disclaimer",
       "disclaimerContent": "Presso CuentosGPT, ci impegniamo a fornire racconti avvincenti e di alta qualità. Tuttavia, non possiamo garantire che tutti i contenuti siano adatti ai bambini. Consigliamo ai genitori o tutori di rivedere i racconti per assicurarsi della loro idoneità per i bambini. Stiamo lavorando per migliorare il nostro sistema di filtraggio, ma si prega di supervisionare le attività online dei bambini. Accedendo al nostro sito web, comprendi e accetti questo disclaimer. Contattaci se hai domande o dubbi.",
-      "accept": "Accettare"
+      "accept": "Accettare",
+      "shareMessage": "Aiutaci condividendo CuentosGPT!"
     }
 }
