@@ -27,6 +27,7 @@ const myMap = new Map([
 
 document.addEventListener('DOMContentLoaded', function() {
   console.info("Apologies for the 'Code-tastrophe' – our web page might have a few unexpected surprises! In the name of CuentosGPT, we really sorry!")
+
   translatePage(true);
 
   changeFontSize(true);
@@ -298,7 +299,8 @@ async function submitContactForm() {
     var thanksMessage = document.getElementById("thanksMessage");
     var button = document.getElementById("sendButton");
     var buttonText = document.getElementById("sendButtonText");
-  
+    var counter = document.getElementById("counter");
+
     button.classList.add("button-disabled");
     buttonText.classList.add("button-disabled");
   
@@ -314,6 +316,8 @@ async function submitContactForm() {
   
     thanksMessage.classList.add("show-message");
 
+    counter.textContent = "500";
+    
     try {
       const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/contact', {
         method: 'POST',
