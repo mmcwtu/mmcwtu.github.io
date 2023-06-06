@@ -49,6 +49,10 @@ async function getStory() {
 
   loadingOverlay.style.display = 'block';
 
+  const language = localStorage.getItem("selectedLanguage");
+  var title = apologiesTitle.get(language);
+  var story = apologiesStory.get(language);
+
   try {
     const responseObj = await fetch('https://2b65yxxjoj.execute-api.sa-east-1.amazonaws.com/default/storyRetrieverDev', {
       method: 'POST',
@@ -59,25 +63,19 @@ async function getStory() {
     });
 
     const responseData = await responseObj.json();
-
     const body = responseData.body
-    var title = "";
-    var story = "";
-
-    if (body == null || body == "") {
-      const language = localStorage.getItem("selectedLanguage");
-      title = apologiesTitle.get(language)
-      story = apologiesStory.get(language)
-    } else {
+    
+    if (body != null && body != "") {
       title = body.title;
       story = body.storyText;
     }
 
-    localStorage.setItem("title", title);
-    localStorage.setItem("story", story);
   } catch (error) {
     console.error(error);
   }
+
+  localStorage.setItem("title", title);
+  localStorage.setItem("story", story);
 
   loadingOverlay.style.display = 'none';
 
