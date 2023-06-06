@@ -299,6 +299,7 @@ async function submitContactForm() {
     var thanksMessage = document.getElementById("thanksMessage");
     var button = document.getElementById("sendButton");
     var buttonText = document.getElementById("sendButtonText");
+    var counter = document.getElementById("counter");
   
     button.classList.add("button-disabled");
     buttonText.classList.add("button-disabled");
@@ -314,6 +315,8 @@ async function submitContactForm() {
     contactMessage.value = "";
   
     thanksMessage.classList.add("show-message");
+
+    counter.textContent = "500";
 
     try {
       const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/contact', {
