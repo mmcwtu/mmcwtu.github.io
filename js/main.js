@@ -317,7 +317,7 @@ async function submitContactForm() {
     thanksMessage.classList.add("show-message");
 
     counter.textContent = "500";
-    
+
     try {
       const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/contact', {
         method: 'POST',
