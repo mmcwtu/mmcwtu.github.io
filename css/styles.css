@@ -128,7 +128,7 @@ a {
   height: 100%;
   justify-content: center;
   align-items: center;
-  top: 6vh;
+  top: 5vh;
   margin-bottom: 20vh;
 }
 
@@ -519,12 +519,14 @@ textarea {
 .disclaimer-title {
   color: #FFFFFF;
   font-family: "Nunito";
+  font-size: 3vh;
 }
 
 .disclaimer-content {
   color: #FFFFFF;
   margin: 5vh;
   font-family: "Nunito";
+  font-size: 2vh;
 }
 
 .disclaimer-button {
@@ -629,13 +631,32 @@ textarea {
   height: auto;
 }
 
-/* For iPhones X to 12 */
-@media only screen 
-  and (max-device-width: 414px) {
-  .menu-image {
-    height: auto;
-  }
+.welcome-image-home {
+  max-width: 100%;
+  height: 8.5vh;
+  margin-block: 1.5vh;
+  margin-bottom: 2vh;
+}
 
+.menu-image {
+  height: auto;
+}
+
+.scrollable-container {
+  width: 90%;
+  overflow-y: auto;
+  flex-direction: column;
+  margin-block: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 5%;
+}
+
+.scrollable-container img {
+  width: 95%;
+}
+
+/* For iPhones X to 12 */
+@media only screen and (max-device-width: 414px) {
   .scrollable-container-small {
     height: 20vh;
   }
@@ -643,34 +664,18 @@ textarea {
   .scrollable-container-big {
     height: 30vh;
   }
-
-  .welcome-image-home {
-    max-width: 100%;
-    height: 10vh;
-    margin-block: 1.5vh;
-  }
-
-  .scrollable-container {
-    width: 90%;
-    overflow-y: auto;
-    flex-direction: column;
-    margin-block: 10px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5%;
-  }
   
   .scrollable-container img {
     width: 95%;
   }
+
+  .credits-box {
+    height: 68vh;
+  }
 }
 
 /* For iPhones 14 */
-@media only screen 
-  and (max-device-width: 812px) {
-  .menu-image {
-    height: auto;
-  }
-
+@media only screen and (max-device-width: 812px) {
   .scrollable-container-small {
     height: 50vh;
   }
@@ -678,28 +683,50 @@ textarea {
   .scrollable-container-big {
     height: 68vh;
   }
+}
 
+/* For iPhone mini */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   .welcome-image-home {
-    max-width: 100%;
-    height: 10vh;
-    margin-block: 1.5vh;
+    height: 8vh;
   }
 
-  .scrollable-container {
-    width: 90%;
-    overflow-y: auto;
-    flex-direction: column;
-    margin-block: 10px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5%;
+  .menu-image {
+    height: 14vh;
+  }
+
+  .scrollable-container-small {
+    height: 44vh;
   }
   
-  .scrollable-container img {
-    width: 95%;
+  .scrollable-container-big {
+    height: 62vh;
+  }
+
+  .contact-message {
+    height: 10vh;
+  }
+
+  .contact-button {
+    top: 78%;
+  }
+
+  .credits-link {
+    top: 88%;
+    left: 50%;
+  }
+
+  .credits-box {
+    height: 62vh;
+  }
+
+  .main-menu-container {
+    top: 2vh;
+    margin-top: -3vh;
   }
 }
 
-/* For iPads (portrait and landscape) */
+/* For iPads */
 @media only screen 
   and (min-device-width: 768px)
   and (max-device-width: 1024px) {
@@ -720,22 +747,16 @@ textarea {
   }
 
   .welcome-image-home {
-    max-width: 100%;
+    top: 5%;
     height: 10vh;
-    margin-block: 1.5vh;
-    margin-top: 5vh;
+    margin-top: 6vh;
   }
 
   .scrollable-container {
     width: 70%;
-    overflow-y: auto;
-    flex-direction: column;
-    margin-block: 10px;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5%;
   }
-  
-  .scrollable-container img {
-    width: 95%;
+
+  .credits-box {
+    height: 80vh;
   }
 }
