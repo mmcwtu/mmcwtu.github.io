@@ -1,0 +1,38 @@
+@media only screen 
+  and (orientation: portrait)
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+  .menu-image {
+    height: 17vh;
+  }
+
+  .scrollable-container-small {
+    height: 60vh;
+  }
+  
+  .scrollable-container-big {
+    height: 75vh;
+  }
+
+  .contact-message {
+    height: 30vh;
+  }
+
+  .welcome-image-home {
+    top: 5%;
+    height: 10vh;
+    margin-top: 6vh;
+  }
+
+  .scrollable-container {
+    width: 70%;
+  }
+
+  .credits-box {
+    height: 80vh;
+  }
+}
+
+.hide-desktop-message {
+  display: none;
+}

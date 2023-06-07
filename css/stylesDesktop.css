@@ -1,0 +1,83 @@
+/* For Desktop */
+@media only screen
+  and (min-width: 1025px) {
+  .show-desktop-message {
+    display: block;
+  }
+
+  .menu-image {
+    height: 30vh;
+    border-radius: 15px;
+  }
+
+  .welcome-image-home {
+    height: 15vh;
+    margin-top: 12vh;
+  }
+
+  .scrollable-container-small {
+    height: 60vh;
+  }
+  
+  .scrollable-container-big {
+    height: 75vh;
+  }
+  
+  .image-text-story {
+    top: 80%;
+    font-size: 3vw;
+  }
+
+  .disclaimer-button-image {
+    width: auto;
+    height: 2.5 rem;
+  }
+
+  .welcome-image {
+    width: 50vw;
+  }
+
+  .welcome-message {
+    font-size: 5vh;
+  }
+
+  .landscape-menu-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .scrollable-container {
+    width: 80%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    flex-direction: row;
+    margin-block: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+  }
+
+  .scrollable-container-small {
+    height: 40%;
+  }
+
+  .scrollable-container-big {
+    height: 40%;
+  }
+
+  .image-with-text-container {
+    display: inline-block;
+    width: 50%;
+    max-width: auto;
+    overflow: hidden;
+  }
+
+  .unselected-image {
+    border: 1px solid rgb(121, 121, 121);
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    max-width: 100%;
+    border-radius: 15px;
+    margin-block: 5px;
+  }
+}

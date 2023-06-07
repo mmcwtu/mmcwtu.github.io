@@ -14,6 +14,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CuentosGPT</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/stylesDesktop.css">
+  <link rel="stylesheet" href="css/stylesIpad.css">
+  <link rel="stylesheet" href="css/stylesIphone.css">
+  <link rel="stylesheet" href="css/stylesLandscape.css">
 </head>
 <body>
 
@@ -22,26 +26,30 @@
   <div class="main-menu-container center-content">
     <img class="welcome-image-home center-content" src="images/pageLogo.png" alt="start">
 
-    <div class="card-margin image-with-text-container" onclick="pageTransition('story.html', 'quick')">
-      <img class="unselected-menu-image menu-image" src="images/mainMenu/quickStoryWide.png" alt="quick">
-      <div class="image-text-story image-text-menu" data-lang="quickStoryOptionLabel">Cuento Rápido</div>
+    <div class="landscape-menu-container">
+      <div class="card-margin menu-image-with-text-container" onclick="pageTransition('story.html', 'quick')">
+        <img class="unselected-menu-image menu-image" src="images/mainMenu/quickStoryWide.png" alt="quick">
+        <div class="image-text-story image-text-menu" data-lang="quickStoryOptionLabel">Cuento Rápido</div>
+      </div>
+      
+      <div class="card-margin menu-image-with-text-container" onclick="pageTransition('newStory.html', 'new')">
+        <img class="unselected-menu-image menu-image" src="images/mainMenu/newStoryWide.png" alt="new">
+        <div class="image-text-story image-text-menu" data-lang="newStoryOptionLabel">Nuevo Cuento</div>
+      </div>
     </div>
-    
-    <div class="card-margin image-with-text-container" onclick="pageTransition('newStory.html', 'new')">
-      <img class="unselected-menu-image menu-image" src="images/mainMenu/newStoryWide.png" alt="new">
-      <div class="image-text-story image-text-menu" data-lang="newStoryOptionLabel">Nuevo Cuento</div>
-    </div>
+
+    <div class="landscape-menu-container">
+      <div class="card-margin menu-image-with-text-container" onclick="pageTransition('trueStory.html', 'true')">
+        <img class="unselected-menu-image menu-image" src="images/mainMenu/trueStoryWide.png" alt="true">
+        <div class="image-text-story image-text-menu" data-lang="trueStoryOptionLabel">Cuento Real</div>
+      </div>
   
-    <div class="card-margin image-with-text-container" onclick="pageTransition('trueStory.html', 'true')">
-      <img class="unselected-menu-image menu-image" src="images/mainMenu/trueStoryWide.png" alt="true">
-      <div class="image-text-story image-text-menu" data-lang="trueStoryOptionLabel">Cuento Real</div>
+      <div class="card-margin menu-image-with-text-container" onclick="pageTransition('classicStory.html', 'classic')">
+        <img class="unselected-menu-image menu-image" src="images/mainMenu/classicStoryWide.png" alt="classic">
+        <div class="image-text-story image-text-menu" data-lang="classicStoryOptionLabel">Cuento Clásico</div>
+      </div>
     </div>
-
-    <div class="card-margin image-with-text-container" onclick="pageTransition('classicStory.html', 'classic')">
-      <img class="unselected-menu-image menu-image" src="images/mainMenu/classicStoryWide.png" alt="classic">
-      <div class="image-text-story image-text-menu" data-lang="classicStoryOptionLabel">Cuento Clásico</div>
-    </div>
-
+      
   </div>
   
 
@@ -92,6 +100,12 @@
 
   <div class="disclaimer-overlay" id="disclaimer-overlay">
     <div class="disclaimer-container">
+      <div class="disclaimer-title hide-desktop-message show-desktop-message" data-lang="desktopTitle">
+        Experiencia móvil optimizada
+      </div>
+      <p class="disclaimer-content hide-desktop-message show-desktop-message" data-lang="desktopMessage">
+        CuentosGPT ha sido diseñada para que la disfrutes en dispositivos móviles, como teléfonos o tablets. El uso de CuentosGPT en tu actual dispositivo puede provocar que tu experiencia con la interfaz visual no sea completamente satisfactoria.
+      </p>
       <div class="disclaimer-title" data-lang="disclaimerTitle">
         Descargo de responsabilidad
       </div>
