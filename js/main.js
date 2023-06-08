@@ -55,7 +55,7 @@ async function getStory() {
   var story = apologiesStory.get(language);
 
   try {
-    const responseObj = await fetch('https://haq91yyijc.execute-api.sa-east-1.amazonaws.com/default/storyRetriever', {
+    const responseObj = await fetch('https://2b65yxxjoj.execute-api.sa-east-1.amazonaws.com/default/storyRetrieverDev', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
