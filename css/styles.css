@@ -132,6 +132,12 @@ a {
   margin-bottom: 20vh;
 }
 
+.menu-image-with-text-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .image-with-text-container {
   position: relative;
   display: flex;
@@ -467,11 +473,6 @@ textarea {
   overflow-x: scroll;
 }
 
-.cards-scrollable {
-  display:inline-block;
-  padding-block: 1vh;
-}
-
 .label-margin {
   margin-top: 4vh;
   margin-bottom: 1.5vh;
@@ -480,7 +481,7 @@ textarea {
 .page-title {
   margin-top: 2vh;
   margin-bottom: 3vh;
-  font-size: 3.5vh
+  font-size: 1.8rem
 }
 
 .top-margin {
@@ -529,7 +530,8 @@ textarea {
 
 .disclaimer-content {
   color: #FFFFFF;
-  margin: 5vh;
+  margin-inline: 5vh;
+  margin-bottom: 7vh;
   font-family: "Nunito";
   font-size: 2vh;
 }
@@ -556,8 +558,8 @@ textarea {
 }
 
 .welcome-image {
-  max-width: 100%;
-  max-height: 100%;
+  width: 95vw;
+  max-height: auto;
 }
 
 .fade-out {
@@ -663,110 +665,4 @@ textarea {
 .share-message {
   text-align: center;
   margin-block: 2vh;
-}
-
-/* For iPhones X to 12 */
-@media only screen and (max-device-width: 414px) {
-  .scrollable-container-small {
-    height: 20vh;
-  }
-  
-  .scrollable-container-big {
-    height: 30vh;
-  }
-  
-  .scrollable-container img {
-    width: 95%;
-  }
-
-  .credits-box {
-    height: 68vh;
-  }
-}
-
-/* For iPhones 14 */
-@media only screen and (max-device-width: 812px) {
-  .scrollable-container-small {
-    height: 50vh;
-  }
-  
-  .scrollable-container-big {
-    height: 68vh;
-  }
-}
-
-/* For iPhone mini */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-  .welcome-image-home {
-    height: 8vh;
-  }
-
-  .menu-image {
-    height: 14vh;
-  }
-
-  .scrollable-container-small {
-    height: 44vh;
-  }
-  
-  .scrollable-container-big {
-    height: 62vh;
-  }
-
-  .contact-message {
-    height: 10vh;
-  }
-
-  .contact-button {
-    top: 78%;
-  }
-
-  .credits-link {
-    top: 88%;
-    left: 50%;
-  }
-
-  .credits-box {
-    height: 62vh;
-  }
-
-  .main-menu-container {
-    top: 2vh;
-    margin-top: -3vh;
-  }
-}
-
-/* For iPads */
-@media only screen 
-  and (min-device-width: 768px)
-  and (max-device-width: 1024px) {
-  .menu-image {
-    height: 17vh;
-  }
-
-  .scrollable-container-small {
-    height: 60vh;
-  }
-  
-  .scrollable-container-big {
-    height: 75vh;
-  }
-
-  .contact-message {
-    height: 30vh;
-  }
-
-  .welcome-image-home {
-    top: 5%;
-    height: 10vh;
-    margin-top: 6vh;
-  }
-
-  .scrollable-container {
-    width: 70%;
-  }
-
-  .credits-box {
-    height: 80vh;
-  }
 }

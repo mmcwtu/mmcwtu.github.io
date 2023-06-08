@@ -41,7 +41,7 @@ async function getStory() {
   const loadingOverlay = document.getElementById('loading-overlay');
   const characterName = document.getElementById('name') == null ? "" : document.getElementById('name').value;
   const language = localStorage.getItem("selectedLanguage") ?? "es";
-  
+
   const data = { 
     characterName: characterName,
     storyType: localStorage.getItem("storyType"),

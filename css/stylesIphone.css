@@ -1,0 +1,77 @@
+/* For iPhones X to 12 */
+@media only screen
+  and (max-device-width: 414px)
+  and (orientation: portrait) {
+  .scrollable-container-small {
+    height: 20vh;
+  }
+  
+  .scrollable-container-big {
+    height: 30vh;
+  }
+  
+  .scrollable-container img {
+    width: 95%;
+  }
+
+  .credits-box {
+    height: 68vh;
+  }
+}
+
+/* For iPhones 14 */
+@media only screen
+  and (orientation: portrait) 
+  and (max-device-width: 812px) {
+  .scrollable-container-small {
+    height: 50vh;
+  }
+  
+  .scrollable-container-big {
+    height: 68vh;
+  }
+}
+
+/* For iPhone mini */
+@media only screen
+  and (orientation: portrait)
+  and (device-width: 375px)
+  and (device-height: 812px) {
+  .welcome-image-home {
+    height: 8vh;
+  }
+
+  .menu-image {
+    height: 14vh;
+  }
+
+  .scrollable-container-small {
+    height: 44vh;
+  }
+  
+  .scrollable-container-big {
+    height: 62vh;
+  }
+
+  .contact-message {
+    height: 10vh;
+  }
+
+  .contact-button {
+    top: 78%;
+  }
+
+  .credits-link {
+    top: 88%;
+    left: 50%;
+  }
+
+  .credits-box {
+    height: 62vh;
+  }
+
+  .main-menu-container {
+    top: 2vh;
+    margin-top: -3vh;
+  }
+}

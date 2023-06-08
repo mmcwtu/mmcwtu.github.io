@@ -1,0 +1,154 @@
+@media only screen
+  and (max-device-width: 1023px)
+  and (orientation: landscape) {
+  .show-desktop-message {
+    display: block;
+  }
+
+  .disclaimer-title {
+    font-size: 4vh;
+  }
+  
+  .disclaimer-content {
+    font-size: 3vh;
+  }
+
+  .disclaimer-button-image {
+    width: auto;
+    height: 2rem;
+  }
+
+  .custom-button-text {
+    font-size: 120%;
+  }
+
+  .disclaimer-button {
+    top: 75%
+  }
+
+  .disclaimer-container {
+    margin-top: 1%;
+  }
+
+  .welcome-image {
+    width: 50vw;
+  }
+
+  .welcome-message {
+    font-size: 2.5vw;
+  }
+
+  .main-menu-container {
+    top: 2vh;
+    margin-top: -3vh;
+  }
+
+  .menu-image {
+    height: 25vh;
+    border-radius: 10px;
+    margin-inline: 5px;
+  }
+
+  .image-text-story {
+    top: 80%;
+    font-size: 4vh;
+  }
+
+  .landscape-menu-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .scrollable-container {
+    width: 80%;
+    height: 20%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    flex-direction: row;
+    margin-block: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+  }
+
+  .scrollable-container-small {
+    height: 20%;
+    margin-top: 1vh;
+  }
+
+  .image-with-text-container {
+    display: inline-block;
+    width: 30%;
+    max-width: auto;
+    overflow: hidden;
+  }
+
+  .unselected-image {
+    border: 1px solid rgb(121, 121, 121);
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5vw;
+    margin-block: 5px;
+  }
+
+  .label-margin {
+    margin-top: 4vh;
+    margin-bottom: 1vh;
+    font-size: 0.8rem;
+  }
+
+  .page-title {
+    font-size: 1rem;
+  }
+
+  .text-field {
+    font-size: 0.7rem;
+  }
+
+  .label-contact {
+    font-size: 0.7rem;
+  }
+
+  .contact-text-field {
+    font-size: 0.7rem;
+    margin: 3px;
+    width: 40vw;
+    padding: 5px;
+    border-radius: 20px;
+    height: 4vh;
+  }
+
+  .contact-message {
+    font-size: 0.7rem;
+    margin: 3px;
+    width: 40vw;  
+    height: 8vh;
+    border-radius: 20px;
+  }
+
+  .contact-button {
+    top: 74%;
+  }
+
+  .custom-button-image {
+    max-width: auto;
+    height: 1.5rem;
+  }
+
+  .custom-button-text {
+    font-size: 100%;
+  }
+
+  .counter-container {
+    display: none;
+  }
+
+  .credits-link {
+    top: 83%;
+    font-size: 0.8rem;
+  }
+
+  .story-box {
+    height: 62vh;
+  }
+}
