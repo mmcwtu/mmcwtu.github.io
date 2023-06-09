@@ -26,6 +26,7 @@ const myMap = new Map([
 ]);
 
 document.addEventListener('DOMContentLoaded', function() {
+  console.info("CuentosGPT v1.0.0")
   console.info("Apologies for the 'Code-tastrophe' – our web page might have a few unexpected surprises! In the name of CuentosGPT, we really sorry!")
 
   translatePage(true);
