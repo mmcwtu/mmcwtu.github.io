@@ -30,51 +30,66 @@
     <div class="control">
       <input class="text-field" type="text" id="name" data-lang="randomNamePlaceholder" placeholder="Nombre aleatorio">
     </div>
+
+    <div class="label-margin" data-lang="storySizeLabel">Longitud del cuento:</div>
+
+    <div class="center-size-content">
+      <div class="size-selector-container">
+        <div class="size-selector-button" onclick="selectStorySize('short')">
+          <img id="shortSize" class="button-size" src="images/newStory/storySizeL.png" alt="short">
+          <div id="shortSizeText" class="custom-button-text size-button-text" data-lang="shortLabel">Corto</div>
+        </div>
+        <div class="size-selector-button" onclick="selectStorySize('long')">
+          <img id="longSize" class="button-size unselected-size" src="images/newStory/storySizeR.png" alt="long">
+          <div id="longSizeText" class="custom-button-text size-button-text unselected-size-text" data-lang="longLabel">Largo</div>
+        </div>
+      </div>
+    </div>
       
     <div class="label-margin" data-lang="storyTypeLabel">Tipo de cuento:</div>
 
     <div class="center-content">
       <div class="scrollable-container scrollable-container-small">
 
-          <div class="image-with-text-container" onclick="selectCard('fantasy')">
-            <img class="unselected-image" src="images/newStory/fantasySq.png" alt="fantasy">
-            <div class="image-text-story" data-lang="storyTypeLabelFantasy">Fantasía</div>
-          </div>
+        <div class="image-with-text-container" onclick="selectCard('fantasy')">
+          <img class="unselected-image" src="images/newStory/fantasySq.png" alt="fantasy">
+          <div class="image-text-story" data-lang="storyTypeLabelFantasy">Fantasía</div>
+        </div>
+
+        <div class="image-with-text-container" onclick="selectCard('scifi')">
+          <img class="unselected-image" src="images/newStory/scifiSq.png" alt="scifi">
+          <div class="image-text-story" data-lang="storyTypeLabelSciFi">Ciencia ficción</div>
+        </div>
   
-          <div class="image-with-text-container" onclick="selectCard('scifi')">
-            <img class="unselected-image" src="images/newStory/scifiSq.png" alt="scifi">
-            <div class="image-text-story" data-lang="storyTypeLabelSciFi">Ciencia ficción</div>
-          </div>
+        <div class="image-with-text-container" onclick="selectCard('adventures')">
+          <img class="unselected-image" src="images/newStory/adventuresSq.png" alt="adventures">
+          <div class="image-text-story" data-lang="storyTypeLabelAdventure">Aventuras</div>
+        </div>
   
-          <div class="image-with-text-container" onclick="selectCard('adventures')">
-            <img class="unselected-image" src="images/newStory/adventuresSq.png" alt="adventures">
-            <div class="image-text-story" data-lang="storyTypeLabelAdventure">Aventuras</div>
-          </div>
-    
-          <div class="image-with-text-container" onclick="selectCard('detectives')">
-            <img class="unselected-image" src="images/newStory/detectivesSq.png" alt="detectives">
-            <div class="image-text-story" data-lang="storyTypeLabelDetectives">Detectives</div>
-          </div>
-  
-          <div class="image-with-text-container" onclick="selectCard('animals')">
-            <img class="unselected-image" src="images/newStory/animalsSq.png" alt="animals">
-            <div class="image-text-story" data-lang="storyTypeLabelAnimals">Animales</div>
-          </div>
-  
-          <div class="image-with-text-container" onclick="selectCard('myths')">
-            <img class="unselected-image" src="images/newStory/mythsSq.png" alt="myths">
-            <div class="image-text-story" data-lang="storyTypeLabelMyths">Mitos y Leyendas</div>
-          </div>
-  
-          <div class="image-with-text-container" onclick="selectCard('christmas')">
-            <img class="unselected-image" src="images/newStory/christmasSq.png" alt="christmas">
-            <div class="image-text-story" data-lang="storyTypeLabelChristmas">Navidad</div>
-          </div>
-  
-          <div class="image-with-text-container" onclick="selectCard('halloween')">
-            <img class="unselected-image" src="images/newStory/halloweenSq.png" alt="halloween">
-            <div class="image-text-story" data-lang="storyTypeLabelHalloween">Halloween</div>
-          </div>
+        <div class="image-with-text-container" onclick="selectCard('detectives')">
+          <img class="unselected-image" src="images/newStory/detectivesSq.png" alt="detectives">
+          <div class="image-text-story" data-lang="storyTypeLabelDetectives">Detectives</div>
+        </div>
+
+        <div class="image-with-text-container" onclick="selectCard('animals')">
+          <img class="unselected-image" src="images/newStory/animalsSq.png" alt="animals">
+          <div class="image-text-story" data-lang="storyTypeLabelAnimals">Animales</div>
+        </div>
+
+        <div class="image-with-text-container" onclick="selectCard('myths')">
+          <img class="unselected-image" src="images/newStory/mythsSq.png" alt="myths">
+          <div class="image-text-story" data-lang="storyTypeLabelMyths">Mitos y Leyendas</div>
+        </div>
+
+        <div class="image-with-text-container" onclick="selectCard('christmas')">
+          <img class="unselected-image" src="images/newStory/christmasSq.png" alt="christmas">
+          <div class="image-text-story" data-lang="storyTypeLabelChristmas">Navidad</div>
+        </div>
+
+        <div class="image-with-text-container" onclick="selectCard('halloween')">
+          <img class="unselected-image" src="images/newStory/halloweenSq.png" alt="halloween">
+          <div class="image-text-story" data-lang="storyTypeLabelHalloween">Halloween</div>
+        </div>
 
       </div>
     </div>

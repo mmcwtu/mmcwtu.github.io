@@ -3,7 +3,7 @@
   and (max-device-width: 414px)
   and (orientation: portrait) {
   .scrollable-container-small {
-    height: 20vh;
+    height: 15vh;
   }
   
   .scrollable-container-big {
@@ -24,7 +24,7 @@
   and (orientation: portrait) 
   and (max-device-width: 812px) {
   .scrollable-container-small {
-    height: 50vh;
+    height: 33vh;
   }
   
   .scrollable-container-big {
@@ -46,7 +46,7 @@
   }
 
   .scrollable-container-small {
-    height: 44vh;
+    height: 30vh;
   }
   
   .scrollable-container-big {
