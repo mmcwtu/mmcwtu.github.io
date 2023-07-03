@@ -16,6 +16,7 @@ const storyType = document.querySelector('#storyType');
 var selectedImage = null;
 var submittedStoryType = "";
 var submittedStoryName = "";
+var submittedStorySize = "short";
 const urlParams = new URLSearchParams(window.location.search);
 const pageParam = urlParams.get('prev');
 
@@ -47,6 +48,7 @@ async function getStory() {
     characterName: characterName,
     storyType: localStorage.getItem("storyType"),
     storyName: submittedStoryName,
+    storySize: submittedStorySize,
     storyLanguage: myMap.get(language)
   };
 
@@ -361,5 +363,26 @@ function closeDisclaimerOverlay(fromButton) {
         disclaimerOverlay.classList.add("hide-element");
       }
     }
+  }
+}
+
+function selectStorySize(storySize) {
+  submittedStorySize = storySize;
+
+  var shortButton = document.getElementById("shortSize");
+  var longButton = document.getElementById("longSize");
+  var shortButtonText = document.getElementById("shortSizeText");
+  var longButtonText = document.getElementById("longSizeText");
+
+  if (storySize === 'short') {
+    shortButton.classList.remove('unselected-size');
+    longButton.classList.add('unselected-size');
+    shortButtonText.classList.remove('unselected-size-text');
+    longButtonText.classList.add('unselected-size-text');
+  } else {
+    shortButton.classList.add('unselected-size');
+    longButton.classList.remove('unselected-size');
+    shortButtonText.classList.add('unselected-size-text');
+    longButtonText.classList.remove('unselected-size-text');
   }
 }
